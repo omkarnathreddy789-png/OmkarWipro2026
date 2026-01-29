@@ -1,0 +1,155 @@
+Run all tests ---->pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: anyio-4.6.2.post1
+collected 9 items
+
+tests\test_auth.py::test_valid_login PASSED
+tests\test_auth.py::test_invalid_login FAILED
+tests\test_calculator.py::test_multiply PASSED
+tests\test_exceptions.py::test_division PASSED
+tests\test_math.py::test_addition PASSED
+tests\test_math.py::test_subtraction PASSED
+tests\test_skips.py::test_payment SKIPPED (Feature not implemented yet)
+tests\test_skips.py::test_linux_only SKIPPED (Not supported on Windows)
+tests\test_skips.py::test_known_issue XFAIL (Known bug)
+
+====================================================== FAILURES =======================================================
+_________________________________________________ test_invalid_login __________________________________________________
+
+    def test_invalid_login():
+>       assert login("user","user123") == "Login UnSuccessful"
+E       AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+E
+E         - Login UnSuccessful
+E         + Invalid username or password
+
+tests\test_auth.py:7: AssertionError
+=============================================== short test summary info ===============================================
+FAILED tests\test_auth.py::test_invalid_login - AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+================================== 1 failed, 5 passed, 2 skipped, 1 xfailed in 0.16s ==================================
+
+Run tests from one file ------>pytest tests/test_math.py
+
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: anyio-4.6.2.post1
+collected 2 items
+
+tests\test_math.py::test_addition PASSED
+tests\test_math.py::test_subtraction PASSED
+
+================================================== 2 passed in 0.04s ==================================================
+
+Run one specific test ------>pytest tests/test_math.py::test_addition
+
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: anyio-4.6.2.post1
+collected 1 item
+
+tests\test_math.py::test_addition PASSED
+
+================================================== 1 passed in 0.04s ==================================================
+
+Run only smoke tests ---->pytest -m smoke
+=================================================== test session starts ====================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: anyio-4.6.2.post1
+collected 9 items / 9 deselected / 0 selected
+
+================================================== 9 deselected in 0.04s ===================================================
+
+Run tests in parallel ----> pytest -n auto
+=================================================== test session starts ====================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: xdist-3.8.0
+8 workers [9 items]
+scheduling tests via LoadScheduling
+
+tests\test_calculator.py::test_multiply
+tests\test_auth.py::test_valid_login
+tests\test_math.py::test_subtraction
+tests\test_math.py::test_addition
+tests\test_exceptions.py::test_division
+tests\test_skips.py::test_payment
+tests\test_auth.py::test_invalid_login
+tests\test_skips.py::test_linux_only
+[gw6] SKIPPED tests\test_skips.py::test_payment
+[gw7] SKIPPED tests\test_skips.py::test_linux_only
+[gw3] PASSED tests\test_exceptions.py::test_division
+[gw2] PASSED tests\test_calculator.py::test_multiply
+[gw4] PASSED tests\test_math.py::test_addition
+[gw0] PASSED tests\test_auth.py::test_valid_login
+tests\test_skips.py::test_known_issue
+[gw5] PASSED tests\test_math.py::test_subtraction
+[gw1] FAILED tests\test_auth.py::test_invalid_login
+[gw0] XFAIL tests\test_skips.py::test_known_issue
+
+========================================================= FAILURES =========================================================
+____________________________________________________ test_invalid_login ____________________________________________________
+[gw1] win32 -- Python 3.13.0 C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+
+    def test_invalid_login():
+>       assert login("user","user123") == "Login UnSuccessful"
+E       AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+E
+E         - Login UnSuccessful
+E         + Invalid username or password
+
+tests\test_auth.py:7: AssertionError
+================================================= short test summary info ==================================================
+FAILED tests\test_auth.py::test_invalid_login - AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+==================================== 1 failed, 5 passed, 2 skipped, 1 xfailed in 2.17s =====================================
+
+Generate HTML report -------->pytest --html=report.html --self-contained-html
+
+=================================================== test session starts ====================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11
+configfile: pytest.ini
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 9 items
+
+tests\test_auth.py::test_valid_login PASSED
+tests\test_auth.py::test_invalid_login FAILED
+tests\test_calculator.py::test_multiply PASSED
+tests\test_exceptions.py::test_division PASSED
+tests\test_math.py::test_addition PASSED
+tests\test_math.py::test_subtraction PASSED
+tests\test_skips.py::test_payment SKIPPED (Feature not implemented yet)
+tests\test_skips.py::test_linux_only SKIPPED (Not supported on Windows)
+tests\test_skips.py::test_known_issue XFAIL (Known bug)
+
+========================================================= FAILURES =========================================================
+____________________________________________________ test_invalid_login ____________________________________________________
+
+    def test_invalid_login():
+>       assert login("user","user123") == "Login UnSuccessful"
+E       AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+E
+E         - Login UnSuccessful
+E         + Invalid username or password
+
+tests\test_auth.py:7: AssertionError
+------------- Generated html report: file:///C:/Users/Neeraja/Desktop/Wipro_Practice/Day11/project/report.html -------------
+================================================= short test summary info ==================================================
+FAILED tests\test_auth.py::test_invalid_login - AssertionError: assert 'Invalid username or password' == 'Login UnSuccessful'
+==================================== 1 failed, 5 passed, 2 skipped, 1 xfailed in 0.56s =====================================

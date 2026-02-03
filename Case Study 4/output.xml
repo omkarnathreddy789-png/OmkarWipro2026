@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-02-03T15:44:04.626953" rpa="false" schemaversion="5">
+<suite id="s1" name="Patient Registration" source="C:\Users\USER\PyCharmMiscProject\Case Study 4\patient_registration.robot">
+<kw name="Open Browser To Registration Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-03T15:44:04.934437" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000/register'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-03T15:44:04.934156" elapsed="2.255888"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-03T15:44:07.190474" elapsed="0.063734"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-02-03T15:44:07.254958" elapsed="0.000585"/>
+</kw>
+<status status="PASS" start="2026-02-03T15:44:04.933478" elapsed="2.322432"/>
+</kw>
+<test id="s1-t1" name="Register Patient 1" line="41">
+<kw name="Fill Patient Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T15:44:07.287038" level="INFO">Typing text 'John' into text field 'name=name'.</msg>
+<msg time="2026-02-03T15:44:08.546436" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-03T15:44:08.547821" level="FAIL">Element with locator 'name=name' not found.</msg>
+<arg>name=name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-03T15:44:07.282013" elapsed="1.284389">Element with locator 'name=name' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=age</arg>
+<arg>${age}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.567409" elapsed="0.000256"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='gender' and @value='${gender}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.568332" elapsed="0.000182"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=contact</arg>
+<arg>${contact}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.569092" elapsed="0.000185"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=disease</arg>
+<arg>${disease}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.569939" elapsed="0.000187"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=doctor</arg>
+<arg>${doctor}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.570737" elapsed="0.000176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:08.571828" elapsed="0.000210"/>
+</kw>
+<arg>${PATIENT1_NAME}</arg>
+<arg>${PATIENT1_AGE}</arg>
+<arg>${PATIENT1_GENDER}</arg>
+<arg>${PATIENT1_CONTACT}</arg>
+<arg>${PATIENT1_DISEASE}</arg>
+<arg>${PATIENT1_DOCTOR}</arg>
+<status status="FAIL" start="2026-02-03T15:44:07.275353" elapsed="1.297464">Element with locator 'name=name' not found.</status>
+</kw>
+<status status="FAIL" start="2026-02-03T15:44:07.256467" elapsed="1.318051">Element with locator 'name=name' not found.</status>
+</test>
+<test id="s1-t2" name="Register Patient 2" line="44">
+<kw name="Fill Patient Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T15:44:08.583541" level="INFO">Typing text 'Alice' into text field 'name=name'.</msg>
+<msg time="2026-02-03T15:44:09.803253" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-03T15:44:09.803468" level="FAIL">Element with locator 'name=name' not found.</msg>
+<arg>name=name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-03T15:44:08.582305" elapsed="1.223092">Element with locator 'name=name' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=age</arg>
+<arg>${age}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.805634" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='gender' and @value='${gender}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.805841" elapsed="0.000043"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=contact</arg>
+<arg>${contact}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.806020" elapsed="0.000033"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=disease</arg>
+<arg>${disease}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.806187" elapsed="0.000032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=doctor</arg>
+<arg>${doctor}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.806338" elapsed="0.000029"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-03T15:44:09.806485" elapsed="0.000034"/>
+</kw>
+<arg>${PATIENT2_NAME}</arg>
+<arg>${PATIENT2_AGE}</arg>
+<arg>${PATIENT2_GENDER}</arg>
+<arg>${PATIENT2_CONTACT}</arg>
+<arg>${PATIENT2_DISEASE}</arg>
+<arg>${PATIENT2_DOCTOR}</arg>
+<status status="FAIL" start="2026-02-03T15:44:08.579455" elapsed="1.227225">Element with locator 'name=name' not found.</status>
+</kw>
+<status status="FAIL" start="2026-02-03T15:44:08.577007" elapsed="1.230131">Element with locator 'name=name' not found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-02-03T15:44:14.611758" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
+<msg time="2026-02-03T15:44:14.612064" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Closes the current browser.</doc>
+<status status="FAIL" start="2026-02-03T15:44:09.809323" elapsed="4.802860">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2026-02-03T15:44:04.629289" elapsed="9.983072">Suite teardown failed:
+Execution terminated by signal</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Patient Registration" id="s1" pass="0" fail="2" skip="0">Patient Registration</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-03T15:44:14.611758" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
+</errors>
+</robot>

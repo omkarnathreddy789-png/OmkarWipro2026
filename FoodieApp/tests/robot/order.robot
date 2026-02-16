@@ -1,0 +1,74 @@
+*** Settings ***
+Library    RequestsLibrary
+Library    String
+
+*** Variables ***
+${BASE_URL}    http://127.0.0.1:5000
+
+*** Test Cases ***
+View Orders Flow
+
+    Create Session    foodie    ${BASE_URL}
+
+    # user
+    ${rand}=    Generate Random String    5
+    ${email}=   Set Variable    user${rand}@test.com
+
+    ${user_body}=    Create Dictionary
+    ...    name=RobotUser
+    ...    email=${email}
+    ...    password=1234
+
+    ${user}=    POST On Session    foodie
+    ...    /api/v1/users/register
+    ...    json=${user_body}
+    ...    expected_status=anything
+
+    ${uid}=    Set Variable    ${user.json()}[id]
+
+    # restaurant
+    ${rest_body}=    Create Dictionary    name=RobotRest${rand}    location=Vizag
+
+    ${rest}=    POST On Session    foodie
+    ...    /api/v1/restaurants
+    ...    json=${rest_body}
+    ...    expected_status=anything
+
+    ${rid}=    Set Variable    ${rest.json()}[id]
+
+    # dish
+    ${dish_body}=    Create Dictionary    name=RobotDish    price=200
+
+    ${dish}=    POST On Session    foodie
+    ...    /api/v1/restaurants/${rid}/dishes
+    ...    json=${dish_body}
+    ...    expected_status=anything
+
+    ${did}=    Set Variable    ${dish.json()}[id]
+
+    # order
+    ${order_body}=    Create Dictionary
+    ...    user_id=${uid}
+    ...    restaurant_id=${rid}
+    ...    dishes=${did}
+
+    ${order}=    POST On Session    foodie
+    ...    /api/v1/orders
+    ...    json=${order_body}
+    ...    expected_status=anything
+
+    Status Should Be    201    ${order}
+
+    # view by restaurant
+    ${rview}=    GET On Session    foodie
+    ...    /api/v1/restaurants/${rid}/orders
+    ...    expected_status=anything
+
+    Status Should Be    200    ${rview}
+
+    # view by user
+    ${uview}=    GET On Session    foodie
+    ...    /api/v1/users/${uid}/orders
+    ...    expected_status=anything
+
+    Status Should Be    200    ${uview}

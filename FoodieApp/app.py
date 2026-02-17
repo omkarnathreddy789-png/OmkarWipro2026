@@ -77,7 +77,7 @@ def search_restaurants():
 
 
 
-# ⭐ REQUIRED by test_foodie_app.py
+#  REQUIRED by test_foodie_app.py
 @app.route("/api/v1/restaurants/<int:rest_id>", methods=["GET"])
 def view_restaurant(rest_id):
     for r in restaurants:
@@ -97,7 +97,7 @@ def add_dish(rest_id):
     return jsonify(dish), 201
 
 
-# ⭐ REQUIRED by test_dish.py
+#  REQUIRED by test_dish.py
 @app.route("/api/v1/dishes/<int:dish_id>", methods=["PUT"])
 def update_dish(dish_id):
     data = request.json
@@ -108,7 +108,7 @@ def update_dish(dish_id):
     return {"error": "Dish not found"}, 404
 
 
-# ⭐ (delete also needed in many flows)
+#  (delete also needed in many flows)
 @app.route("/api/v1/dishes/<int:dish_id>", methods=["DELETE"])
 def delete_dish(dish_id):
     for d in dishes:
@@ -180,7 +180,7 @@ def update_dish_status(dish_id):
 
 
 
-# ⭐ REQUIRED by test_admin.py
+#  REQUIRED by test_admin.py
 @app.route("/api/v1/admin/feedback", methods=["GET"])
 def admin_feedback():
     return jsonify(ratings), 200
@@ -193,3 +193,4 @@ def admin_view_orders():
 # ================= RUN =================
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+

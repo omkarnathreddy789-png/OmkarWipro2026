@@ -1,0 +1,21 @@
+2026-02-19 09:03:57,389 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 09:03:57,427 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-19 09:03:57,430 - INFO - Browser Setup Started: chrome
+2026-02-19 09:03:57,430 - INFO - ====== WebDriver manager ======
+2026-02-19 09:03:58,483 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:03:58,704 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:03:58,868 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 09:04:13,596 - INFO - ========== STARTING ADD PRODUCT TO CART TEST ==========
+2026-02-19 09:04:13,596 - INFO - Navigating to Shop page
+2026-02-19 09:04:19,070 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 09:04:19,070 - INFO - Adding product to basket
+2026-02-19 09:04:19,158 - INFO - Validating product added to basket (View Basket visible)
+2026-02-19 09:04:19,774 - ERROR - Test Failed: test_add_product_to_cart
+2026-02-19 09:04:19,774 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_add_product_to_cart_20260219_090419.png
+2026-02-19 09:04:19,775 - INFO - Browser Teardown Started
+2026-02-19 09:04:22,078 - INFO - Browser Closed Successfully
+
+2026-02-19 09:04:22,086 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-19 09:04:22,092 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 09:04:22,092 - INFO - Total Tests Collected: 1

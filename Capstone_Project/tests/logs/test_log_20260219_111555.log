@@ -1,0 +1,37 @@
+2026-02-19 11:15:55,800 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 11:15:56,204 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 11:15:56,215 - INFO - Total test data rows loaded: 2
+2026-02-19 11:15:56,218 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-19 11:15:56,221 - INFO - Browser Setup Started: chrome
+2026-02-19 11:15:56,221 - INFO - ====== WebDriver manager ======
+2026-02-19 11:15:57,355 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:15:57,463 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:15:57,560 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:16:05,993 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-19 11:16:05,993 - INFO - Navigating to Shop page
+2026-02-19 11:16:08,725 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 11:16:09,170 - ERROR - Test Failed: test_sort_products[data0]
+2026-02-19 11:16:09,170 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_sort_products[data0]_20260219_111608.png
+2026-02-19 11:16:09,171 - INFO - Browser Teardown Started
+2026-02-19 11:16:11,514 - INFO - Browser Closed Successfully
+
+2026-02-19 11:16:11,517 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-19 11:16:11,518 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-19 11:16:11,522 - INFO - Browser Setup Started: chrome
+2026-02-19 11:16:11,524 - INFO - ====== WebDriver manager ======
+2026-02-19 11:16:12,570 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:16:12,689 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:16:12,790 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:16:22,690 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-19 11:16:22,690 - INFO - Navigating to Shop page
+2026-02-19 11:16:25,115 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 11:16:25,391 - ERROR - Test Failed: test_sort_products[data1]
+2026-02-19 11:16:25,392 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_sort_products[data1]_20260219_111625.png
+2026-02-19 11:16:25,398 - INFO - Browser Teardown Started
+2026-02-19 11:16:27,746 - INFO - Browser Closed Successfully
+
+2026-02-19 11:16:27,748 - INFO - ------ Test Finished: test_sort_products[data1] ------
+
+2026-02-19 11:16:27,750 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 11:16:27,750 - INFO - Total Tests Collected: 2

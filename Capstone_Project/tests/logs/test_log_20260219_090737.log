@@ -1,0 +1,24 @@
+2026-02-19 09:07:37,836 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 09:07:37,872 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-19 09:07:37,874 - INFO - Browser Setup Started: chrome
+2026-02-19 09:07:37,874 - INFO - ====== WebDriver manager ======
+2026-02-19 09:07:38,902 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:07:39,161 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:07:39,461 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 09:07:55,363 - INFO - ========== STARTING ADD PRODUCT TO CART TEST ==========
+2026-02-19 09:07:55,364 - INFO - Navigating to Shop page
+2026-02-19 09:07:57,317 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 09:07:57,317 - INFO - Adding product to basket
+2026-02-19 09:07:57,392 - INFO - Validating product added to basket (View Basket visible)
+2026-02-19 09:07:57,412 - INFO - View basket button clicked
+2026-02-19 09:07:59,045 - INFO - Validating basket page URL
+2026-02-19 09:07:59,067 - INFO - Validating page title
+2026-02-19 09:07:59,075 - INFO - Page title: Basket – Automation Practice Site
+2026-02-19 09:07:59,082 - INFO - ========== ADD PRODUCT TO CART TEST PASSED ==========
+2026-02-19 09:07:59,084 - INFO - Browser Teardown Started
+2026-02-19 09:08:01,344 - INFO - Browser Closed Successfully
+
+2026-02-19 09:08:01,345 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-19 09:08:01,347 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 09:08:01,347 - INFO - Total Tests Collected: 1

@@ -1,0 +1,18 @@
+2026-02-19 08:55:27,879 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 08:55:28,312 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 08:55:28,321 - INFO - Total test data rows loaded: 2
+2026-02-19 08:55:28,325 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-19 08:55:28,327 - INFO - Browser Setup Started: chrome
+2026-02-19 08:55:28,327 - INFO - ====== WebDriver manager ======
+2026-02-19 08:55:29,465 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:55:29,711 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:55:30,097 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:55:32,940 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-19 08:55:32,941 - INFO - Opening My Account page
+2026-02-19 08:55:33,386 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-19 08:55:33,631 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 08:55:33,675 - INFO - Total Tests Collected: 4
+2026-02-19 08:55:33,678 - INFO - Browser Teardown Started
+2026-02-19 08:55:35,822 - INFO - Browser Closed Successfully
+

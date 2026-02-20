@@ -1,0 +1,35 @@
+2026-02-19 11:12:23,819 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 11:12:24,220 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 11:12:24,230 - INFO - Total test data rows loaded: 2
+2026-02-19 11:12:24,232 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-19 11:12:24,234 - INFO - Browser Setup Started: chrome
+2026-02-19 11:12:24,235 - INFO - ====== WebDriver manager ======
+2026-02-19 11:12:25,260 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:12:25,367 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:12:25,465 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:12:34,135 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-19 11:12:34,139 - INFO - Navigating to Shop page
+2026-02-19 11:12:35,018 - ERROR - Test Failed: test_sort_products[data0]
+2026-02-19 11:12:35,018 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_sort_products[data0]_20260219_111234.png
+2026-02-19 11:12:35,020 - INFO - Browser Teardown Started
+2026-02-19 11:12:37,329 - INFO - Browser Closed Successfully
+
+2026-02-19 11:12:37,331 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-19 11:12:37,331 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-19 11:12:37,334 - INFO - Browser Setup Started: chrome
+2026-02-19 11:12:37,335 - INFO - ====== WebDriver manager ======
+2026-02-19 11:12:38,328 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:12:38,428 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:12:38,525 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:12:46,438 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-19 11:12:46,438 - INFO - Navigating to Shop page
+2026-02-19 11:12:48,244 - ERROR - Test Failed: test_sort_products[data1]
+2026-02-19 11:12:48,244 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_sort_products[data1]_20260219_111246.png
+2026-02-19 11:12:48,246 - INFO - Browser Teardown Started
+2026-02-19 11:12:50,759 - INFO - Browser Closed Successfully
+
+2026-02-19 11:12:50,763 - INFO - ------ Test Finished: test_sort_products[data1] ------
+
+2026-02-19 11:12:50,770 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 11:12:50,771 - INFO - Total Tests Collected: 2

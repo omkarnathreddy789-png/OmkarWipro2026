@@ -1,0 +1,27 @@
+2026-02-18 09:21:35,266 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 09:21:35,299 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-18 09:21:35,300 - INFO - Browser Setup Started
+2026-02-18 09:21:35,301 - INFO - ====== WebDriver manager ======
+2026-02-18 09:21:37,444 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:21:37,560 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:21:37,666 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 09:22:00,260 - INFO - Browser Teardown Started
+2026-02-18 09:22:02,777 - INFO - Browser Closed Successfully
+
+2026-02-18 09:22:02,779 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-18 09:22:02,779 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------
+2026-02-18 09:22:02,781 - INFO - Browser Setup Started
+2026-02-18 09:22:02,782 - INFO - ====== WebDriver manager ======
+2026-02-18 09:22:03,771 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:22:03,865 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:22:03,963 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 09:22:24,621 - ERROR - Test Failed: test_findOrdersByUser[data1]
+2026-02-18 09:22:24,622 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_findOrdersByUser[data1]_20260218_092224.png
+2026-02-18 09:22:24,623 - INFO - Browser Teardown Started
+2026-02-18 09:22:26,948 - INFO - Browser Closed Successfully
+
+2026-02-18 09:22:26,950 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------
+
+2026-02-18 09:22:26,954 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 09:22:26,954 - INFO - Total Tests Collected: 2

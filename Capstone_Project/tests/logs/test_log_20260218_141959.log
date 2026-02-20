@@ -1,0 +1,38 @@
+2026-02-18 14:20:00,067 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 14:20:00,098 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-18 14:20:00,100 - INFO - Browser Setup Started
+2026-02-18 14:20:00,100 - INFO - ====== WebDriver manager ======
+2026-02-18 14:20:02,188 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:02,333 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:02,451 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 14:20:24,842 - INFO - Browser Teardown Started
+2026-02-18 14:20:27,142 - INFO - Browser Closed Successfully
+
+2026-02-18 14:20:27,143 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-18 14:20:27,143 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-18 14:20:27,144 - INFO - Browser Setup Started
+2026-02-18 14:20:27,145 - INFO - ====== WebDriver manager ======
+2026-02-18 14:20:28,202 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:28,307 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:28,411 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 14:20:54,211 - ERROR - Test Failed: test_login[data1]
+2026-02-18 14:20:54,211 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_login[data1]_20260218_142054.png
+2026-02-18 14:20:54,212 - INFO - Browser Teardown Started
+2026-02-18 14:20:56,513 - INFO - Browser Closed Successfully
+
+2026-02-18 14:20:56,515 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-18 14:20:56,515 - INFO - ------ Test Started: test_logout ------
+2026-02-18 14:20:56,517 - INFO - Browser Setup Started
+2026-02-18 14:20:56,518 - INFO - ====== WebDriver manager ======
+2026-02-18 14:20:57,558 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:57,669 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:20:57,776 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 14:21:10,681 - INFO - Browser Teardown Started
+2026-02-18 14:21:12,953 - INFO - Browser Closed Successfully
+
+2026-02-18 14:21:12,954 - INFO - ------ Test Finished: test_logout ------
+
+2026-02-18 14:21:12,955 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 14:21:12,955 - INFO - Total Tests Collected: 3

@@ -1,0 +1,27 @@
+2026-02-18 13:04:09,947 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 13:04:09,980 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-18 13:04:09,981 - INFO - Browser Setup Started
+2026-02-18 13:04:09,982 - INFO - ====== WebDriver manager ======
+2026-02-18 13:04:11,099 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 13:04:11,208 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 13:04:11,312 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 13:04:45,153 - INFO - Browser Teardown Started
+2026-02-18 13:04:47,468 - INFO - Browser Closed Successfully
+
+2026-02-18 13:04:47,469 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-18 13:04:47,469 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-18 13:04:47,470 - INFO - Browser Setup Started
+2026-02-18 13:04:47,472 - INFO - ====== WebDriver manager ======
+2026-02-18 13:04:48,502 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 13:04:49,247 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 13:04:49,385 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 13:05:18,687 - ERROR - Test Failed: test_search_product[data1]
+2026-02-18 13:05:18,687 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_search_product[data1]_20260218_130518.png
+2026-02-18 13:05:18,688 - INFO - Browser Teardown Started
+2026-02-18 13:05:21,031 - INFO - Browser Closed Successfully
+
+2026-02-18 13:05:21,032 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-18 13:05:21,034 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 13:05:21,034 - INFO - Total Tests Collected: 2

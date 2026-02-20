@@ -1,0 +1,24 @@
+2026-02-19 11:17:12,068 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 11:17:12,466 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 11:17:12,477 - INFO - Total test data rows loaded: 6
+2026-02-19 11:17:12,480 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-19 11:17:12,481 - INFO - Browser Setup Started: chrome
+2026-02-19 11:17:12,482 - INFO - ====== WebDriver manager ======
+2026-02-19 11:17:13,687 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:17:13,811 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:17:13,910 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:17:22,815 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-19 11:17:22,816 - INFO - Navigating to Shop page
+2026-02-19 11:17:25,348 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 11:17:25,353 - INFO - Selecting sort option: menu_order
+2026-02-19 11:17:25,427 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/
+2026-02-19 11:17:25,427 - INFO - Validating default sorting (no orderby parameter expected)
+2026-02-19 11:17:25,428 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-19 11:17:25,429 - INFO - Browser Teardown Started
+2026-02-19 11:17:27,694 - INFO - Browser Closed Successfully
+
+2026-02-19 11:17:27,697 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-19 11:17:27,698 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-19 11:17:27,701 - INFO - Browser Setup Started: chrome
+2026-02-19 11:17:27,703 - INFO - ====== WebDriver manager ======

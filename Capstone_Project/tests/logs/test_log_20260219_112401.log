@@ -1,0 +1,65 @@
+2026-02-19 11:24:01,135 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 11:24:01,536 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 11:24:01,546 - INFO - Total test data rows loaded: 2
+2026-02-19 11:24:01,548 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-19 11:24:01,550 - INFO - Browser Setup Started: chrome
+2026-02-19 11:24:01,551 - INFO - ====== WebDriver manager ======
+2026-02-19 11:24:03,036 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:24:03,147 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:24:03,252 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:24:11,408 - INFO - ========== STARTING PLACE ORDER  TEST ==========
+2026-02-19 11:24:11,408 - INFO - Navigating to Shop page
+2026-02-19 11:24:13,772 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 11:24:13,839 - INFO - Validating 'Add to Basket/View Basket' button visibility
+2026-02-19 11:24:13,851 - INFO - Clicking View Basket
+2026-02-19 11:24:15,961 - INFO - Current URL after clicking basket: https://practice.automationtesting.in/basket/
+2026-02-19 11:24:15,968 - INFO - Proceeding to Checkout
+2026-02-19 11:24:17,309 - INFO - Current URL after checkout click: https://practice.automationtesting.in/checkout/
+2026-02-19 11:24:17,317 - INFO - Entering billing details
+2026-02-19 11:24:18,369 - INFO - Entered First Name: Rani
+2026-02-19 11:24:18,369 - INFO - Entered Last Name: Kumari
+2026-02-19 11:24:18,369 - INFO - Entered Email: rani12@gmail.com
+2026-02-19 11:24:18,369 - INFO - Entered Phone: 9876543210.0
+2026-02-19 11:24:18,446 - INFO - Selecting country: IN
+2026-02-19 11:24:18,475 - INFO - Selected country value: IN
+2026-02-19 11:24:18,475 - INFO - Entering address details
+2026-02-19 11:24:19,051 - INFO - Address: Hitech City, City: Hyderabad, State: Telangana, Zip: 500081.0
+2026-02-19 11:24:19,410 - ERROR - Test Failed: test_place_order_cod[data0]
+2026-02-19 11:24:19,410 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data0]_20260219_112419.png
+2026-02-19 11:24:19,412 - INFO - Browser Teardown Started
+2026-02-19 11:24:21,731 - INFO - Browser Closed Successfully
+
+2026-02-19 11:24:21,733 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-19 11:24:21,733 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-19 11:24:21,735 - INFO - Browser Setup Started: chrome
+2026-02-19 11:24:21,736 - INFO - ====== WebDriver manager ======
+2026-02-19 11:24:22,870 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:24:22,966 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 11:24:23,058 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 11:24:32,530 - INFO - ========== STARTING PLACE ORDER  TEST ==========
+2026-02-19 11:24:32,531 - INFO - Navigating to Shop page
+2026-02-19 11:24:35,175 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 11:24:35,270 - INFO - Validating 'Add to Basket/View Basket' button visibility
+2026-02-19 11:24:35,321 - INFO - Clicking View Basket
+2026-02-19 11:24:37,703 - INFO - Current URL after clicking basket: https://practice.automationtesting.in/basket/
+2026-02-19 11:24:37,713 - INFO - Proceeding to Checkout
+2026-02-19 11:24:39,105 - INFO - Current URL after checkout click: https://practice.automationtesting.in/checkout/
+2026-02-19 11:24:39,114 - INFO - Entering billing details
+2026-02-19 11:24:40,140 - INFO - Entered First Name: John
+2026-02-19 11:24:40,141 - INFO - Entered Last Name: Doe
+2026-02-19 11:24:40,141 - INFO - Entered Email: john@example.com
+2026-02-19 11:24:40,141 - INFO - Entered Phone: 9876501234.0
+2026-02-19 11:24:40,414 - INFO - Selecting country: IN
+2026-02-19 11:24:40,452 - INFO - Selected country value: IN
+2026-02-19 11:24:40,452 - INFO - Entering address details
+2026-02-19 11:24:41,261 - INFO - Address: Madhapur, City: Hyderabad, State: Telangana, Zip: 500081.0
+2026-02-19 11:24:41,594 - ERROR - Test Failed: test_place_order_cod[data1]
+2026-02-19 11:24:41,595 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data1]_20260219_112441.png
+2026-02-19 11:24:41,596 - INFO - Browser Teardown Started
+2026-02-19 11:24:43,959 - INFO - Browser Closed Successfully
+
+2026-02-19 11:24:43,960 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-19 11:24:43,963 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 11:24:43,964 - INFO - Total Tests Collected: 2

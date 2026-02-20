@@ -1,0 +1,24 @@
+2026-02-19 15:34:15,798 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 15:34:16,278 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 15:34:16,289 - INFO - Total test data rows loaded: 1
+2026-02-19 15:34:16,291 - INFO - ------ Test Started: test_user_registration[data0] ------
+2026-02-19 15:34:16,294 - INFO - Browser Setup Started: chrome
+2026-02-19 15:34:16,295 - INFO - ====== WebDriver manager ======
+2026-02-19 15:34:18,070 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 15:34:18,208 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 15:34:18,659 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 15:34:31,963 - INFO - ========== STARTING USER REGISTRATION TEST ==========
+2026-02-19 15:34:31,963 - INFO - Clicking on Sign Up / My Account link
+2026-02-19 15:34:34,751 - INFO - Verifying registration page is loaded
+2026-02-19 15:34:34,791 - INFO - Entering email: Neeraja12@gmail.com
+2026-02-19 15:34:35,108 - INFO - Entering password
+2026-02-19 15:34:38,335 - INFO - Clicking Register button
+2026-02-19 15:34:42,051 - INFO - Validating successful registration (Logout link visible)
+2026-02-19 15:34:42,707 - INFO - ========== USER REGISTRATION TEST PASSED ==========
+2026-02-19 15:34:42,722 - INFO - Browser Teardown Started
+2026-02-19 15:34:46,302 - INFO - Browser Closed Successfully
+
+2026-02-19 15:34:46,303 - INFO - ------ Test Finished: test_user_registration[data0] ------
+
+2026-02-19 15:34:46,305 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 15:34:46,305 - INFO - Total Tests Collected: 1

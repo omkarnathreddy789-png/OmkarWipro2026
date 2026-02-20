@@ -1,0 +1,54 @@
+2026-02-19 13:21:32,047 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 13:21:32,466 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:21:32,477 - INFO - Total test data rows loaded: 2
+2026-02-19 13:21:32,479 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-19 13:21:32,481 - INFO - Browser Setup Started: chrome
+2026-02-19 13:21:32,482 - INFO - ====== WebDriver manager ======
+2026-02-19 13:21:33,644 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:21:33,863 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:21:33,992 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 13:21:45,790 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-19 13:21:45,790 - INFO - Navigating to Shop page
+2026-02-19 13:21:57,325 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 13:21:57,326 - INFO - Adding product to basket
+2026-02-19 13:21:57,382 - INFO - Viewing basket
+2026-02-19 13:21:59,132 - INFO - Proceeding to checkout
+2026-02-19 13:22:01,510 - INFO - Filling billing details
+2026-02-19 13:22:02,365 - INFO - Selecting country: IN
+2026-02-19 13:22:02,382 - INFO - Entering address details
+2026-02-19 13:22:03,202 - INFO - Entering order notes
+2026-02-19 13:22:03,471 - INFO - Selecting payment method: cod
+2026-02-19 13:22:03,514 - INFO - Clicking Place Order button
+2026-02-19 13:22:05,446 - INFO - Verifying order success message
+2026-02-19 13:22:05,446 - INFO - Waiting for success message
+2026-02-19 13:22:05,484 - INFO - Success Message Received: Thank you. Your order has been received.
+2026-02-19 13:22:05,484 - INFO - ========== PLACE ORDER TEST PASSED ==========
+2026-02-19 13:22:05,486 - INFO - Browser Teardown Started
+2026-02-19 13:22:07,815 - INFO - Browser Closed Successfully
+
+2026-02-19 13:22:07,818 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-19 13:22:07,819 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-19 13:22:07,822 - INFO - Browser Setup Started: chrome
+2026-02-19 13:22:07,824 - INFO - ====== WebDriver manager ======
+2026-02-19 13:22:08,863 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:22:08,973 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:22:09,068 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 13:22:17,422 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-19 13:22:17,422 - INFO - Navigating to Shop page
+2026-02-19 13:22:21,730 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 13:22:21,730 - INFO - Adding product to basket
+2026-02-19 13:22:21,781 - INFO - Viewing basket
+2026-02-19 13:22:23,258 - INFO - Proceeding to checkout
+2026-02-19 13:22:24,716 - INFO - Filling billing details
+2026-02-19 13:22:25,868 - INFO - Selecting country: IN
+2026-02-19 13:22:25,878 - INFO - Entering address details
+2026-02-19 13:22:27,991 - ERROR - Test Failed: test_place_order_cod[data1]
+2026-02-19 13:22:27,991 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data1]_20260219_132227.png
+2026-02-19 13:22:27,993 - INFO - Browser Teardown Started
+2026-02-19 13:22:30,435 - INFO - Browser Closed Successfully
+
+2026-02-19 13:22:30,442 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-19 13:22:30,445 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 13:22:30,445 - INFO - Total Tests Collected: 2

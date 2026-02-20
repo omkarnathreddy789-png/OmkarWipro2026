@@ -1,0 +1,76 @@
+2026-02-19 08:56:17,082 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 08:56:17,468 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 08:56:17,477 - INFO - Total test data rows loaded: 2
+2026-02-19 08:56:17,480 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-19 08:56:17,483 - INFO - Browser Setup Started: chrome
+2026-02-19 08:56:17,483 - INFO - ====== WebDriver manager ======
+2026-02-19 08:56:18,499 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:56:18,928 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:56:19,350 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:56:26,799 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-19 08:56:26,799 - INFO - Opening My Account page
+2026-02-19 08:56:28,488 - INFO - Entering email: Rani12@gmail.com
+2026-02-19 08:56:28,690 - INFO - Entering password
+2026-02-19 08:56:28,823 - INFO - Clicking checkbox
+2026-02-19 08:56:28,952 - INFO - Clicking login button
+2026-02-19 08:56:33,729 - INFO - Validating logged in username
+2026-02-19 08:56:33,795 - INFO - ========== LOGIN TEST PASSED ==========
+2026-02-19 08:56:33,797 - INFO - Browser Teardown Started
+2026-02-19 08:56:36,075 - INFO - Browser Closed Successfully
+
+2026-02-19 08:56:36,077 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-19 08:56:36,077 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-19 08:56:36,079 - INFO - Browser Setup Started: chrome
+2026-02-19 08:56:36,080 - INFO - ====== WebDriver manager ======
+2026-02-19 08:56:37,048 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:56:37,267 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:56:37,475 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:56:50,743 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-19 08:56:50,744 - INFO - Opening My Account page
+2026-02-19 08:56:54,901 - INFO - Entering email: Rani13@gmail.com
+2026-02-19 08:56:55,083 - INFO - Entering password
+2026-02-19 08:56:55,207 - INFO - Clicking checkbox
+2026-02-19 08:56:55,333 - INFO - Clicking login button
+2026-02-19 08:56:55,440 - INFO - Validating logged in username
+2026-02-19 08:57:06,126 - ERROR - Test Failed: test_login[data1]
+2026-02-19 08:57:06,126 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_login[data1]_20260219_085705.png
+2026-02-19 08:57:06,132 - INFO - Browser Teardown Started
+2026-02-19 08:57:08,750 - INFO - Browser Closed Successfully
+
+2026-02-19 08:57:08,757 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-19 08:57:08,757 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-19 08:57:08,758 - INFO - Browser Setup Started: chrome
+2026-02-19 08:57:08,759 - INFO - ====== WebDriver manager ======
+2026-02-19 08:57:09,755 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:57:10,118 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:57:10,383 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:57:26,614 - INFO - ========== STARTING LOGOUT TEST ==========
+2026-02-19 08:57:26,615 - INFO - Opening My Account page
+2026-02-19 08:57:30,116 - INFO - Performing login before logout
+2026-02-19 08:57:33,469 - INFO - Clicking sign out
+2026-02-19 08:57:37,651 - INFO - ========== LOGOUT TEST PASSED ==========
+2026-02-19 08:57:37,653 - INFO - Browser Teardown Started
+2026-02-19 08:57:39,933 - INFO - Browser Closed Successfully
+
+2026-02-19 08:57:39,934 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-19 08:57:39,934 - INFO - ------ Test Started: test_logout[data1] ------
+2026-02-19 08:57:39,936 - INFO - Browser Setup Started: chrome
+2026-02-19 08:57:39,937 - INFO - ====== WebDriver manager ======
+2026-02-19 08:57:40,930 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:57:41,168 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:57:41,473 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:57:54,262 - INFO - ========== STARTING LOGOUT TEST ==========
+2026-02-19 08:57:54,262 - INFO - Opening My Account page
+2026-02-19 08:57:59,282 - INFO - Performing login before logout
+2026-02-19 08:58:12,771 - ERROR - Test Failed: test_logout[data1]
+2026-02-19 08:58:12,771 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_logout[data1]_20260219_085812.png
+2026-02-19 08:58:12,773 - INFO - Browser Teardown Started
+2026-02-19 08:58:15,174 - INFO - Browser Closed Successfully
+
+2026-02-19 08:58:15,177 - INFO - ------ Test Finished: test_logout[data1] ------
+
+2026-02-19 08:58:15,179 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 08:58:15,179 - INFO - Total Tests Collected: 4

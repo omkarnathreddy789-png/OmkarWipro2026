@@ -1,0 +1,27 @@
+2026-02-18 09:19:57,947 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 09:19:57,978 - INFO - ------ Test Started: test_filterOrders[data0] ------
+2026-02-18 09:19:57,980 - INFO - Browser Setup Started
+2026-02-18 09:19:57,980 - INFO - ====== WebDriver manager ======
+2026-02-18 09:19:59,063 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:19:59,202 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:19:59,300 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 09:20:15,234 - INFO - Browser Teardown Started
+2026-02-18 09:20:17,490 - INFO - Browser Closed Successfully
+
+2026-02-18 09:20:17,491 - INFO - ------ Test Finished: test_filterOrders[data0] ------
+
+2026-02-18 09:20:17,493 - INFO - ------ Test Started: test_filterOrders[data1] ------
+2026-02-18 09:20:17,494 - INFO - Browser Setup Started
+2026-02-18 09:20:17,505 - INFO - ====== WebDriver manager ======
+2026-02-18 09:20:18,782 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:20:18,896 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 09:20:18,992 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 09:20:42,392 - ERROR - Test Failed: test_filterOrders[data1]
+2026-02-18 09:20:42,393 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_filterOrders[data1]_20260218_092042.png
+2026-02-18 09:20:42,394 - INFO - Browser Teardown Started
+2026-02-18 09:20:44,684 - INFO - Browser Closed Successfully
+
+2026-02-18 09:20:44,685 - INFO - ------ Test Finished: test_filterOrders[data1] ------
+
+2026-02-18 09:20:44,686 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 09:20:44,687 - INFO - Total Tests Collected: 2

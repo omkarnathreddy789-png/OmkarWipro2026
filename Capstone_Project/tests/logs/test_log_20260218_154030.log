@@ -1,0 +1,29 @@
+2026-02-18 15:40:30,610 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 15:40:30,659 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-18 15:40:30,661 - INFO - Browser Setup Started
+2026-02-18 15:40:30,662 - INFO - ====== WebDriver manager ======
+2026-02-18 15:40:32,126 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:40:32,232 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:40:32,333 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 15:40:47,642 - ERROR - Test Failed: test_findOrdersByUser[data0]
+2026-02-18 15:40:47,643 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_findOrdersByUser[data0]_20260218_154047.png
+2026-02-18 15:40:47,644 - INFO - Browser Teardown Started
+2026-02-18 15:40:49,970 - INFO - Browser Closed Successfully
+
+2026-02-18 15:40:49,973 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-18 15:40:49,973 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------
+2026-02-18 15:40:49,974 - INFO - Browser Setup Started
+2026-02-18 15:40:49,976 - INFO - ====== WebDriver manager ======
+2026-02-18 15:40:50,978 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:40:51,078 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:40:51,177 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 15:41:05,554 - ERROR - Test Failed: test_findOrdersByUser[data1]
+2026-02-18 15:41:05,555 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_findOrdersByUser[data1]_20260218_154105.png
+2026-02-18 15:41:05,556 - INFO - Browser Teardown Started
+2026-02-18 15:41:07,860 - INFO - Browser Closed Successfully
+
+2026-02-18 15:41:07,864 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------
+
+2026-02-18 15:41:07,869 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 15:41:07,870 - INFO - Total Tests Collected: 2

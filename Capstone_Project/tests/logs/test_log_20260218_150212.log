@@ -1,0 +1,29 @@
+2026-02-18 15:02:13,048 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 15:02:13,082 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-18 15:02:13,084 - INFO - Browser Setup Started
+2026-02-18 15:02:13,085 - INFO - ====== WebDriver manager ======
+2026-02-18 15:02:14,294 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:02:14,432 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:02:14,537 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 15:02:33,428 - ERROR - Test Failed: test_search_product[data0]
+2026-02-18 15:02:33,428 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_search_product[data0]_20260218_150232.png
+2026-02-18 15:02:33,430 - INFO - Browser Teardown Started
+2026-02-18 15:02:35,803 - INFO - Browser Closed Successfully
+
+2026-02-18 15:02:35,806 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-18 15:02:35,806 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-18 15:02:35,808 - INFO - Browser Setup Started
+2026-02-18 15:02:35,808 - INFO - ====== WebDriver manager ======
+2026-02-18 15:02:36,841 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:02:36,940 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 15:02:38,518 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 15:03:06,910 - ERROR - Test Failed: test_search_product[data1]
+2026-02-18 15:03:06,911 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_search_product[data1]_20260218_150306.png
+2026-02-18 15:03:06,912 - INFO - Browser Teardown Started
+2026-02-18 15:03:09,221 - INFO - Browser Closed Successfully
+
+2026-02-18 15:03:09,234 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-18 15:03:09,239 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 15:03:09,240 - INFO - Total Tests Collected: 2

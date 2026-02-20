@@ -1,0 +1,14 @@
+2026-02-17 14:54:10,207 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-17 14:54:10,376 - INFO - ------ Test Started: test_place_order_cod ------
+2026-02-17 14:54:10,378 - INFO - Browser Setup Started
+2026-02-17 14:54:10,379 - INFO - ====== WebDriver manager ======
+2026-02-17 14:54:11,901 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 14:54:12,019 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 14:54:12,139 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-17 14:54:30,040 - INFO - Browser Teardown Started
+2026-02-17 14:54:32,352 - INFO - Browser Closed Successfully
+
+2026-02-17 14:54:32,353 - INFO - ------ Test Finished: test_place_order_cod ------
+
+2026-02-17 14:54:32,356 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-17 14:54:32,356 - INFO - Total Tests Collected: 1

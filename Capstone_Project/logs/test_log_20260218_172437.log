@@ -1,0 +1,268 @@
+2026-02-18 17:24:37,184 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 17:24:37,286 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-18 17:24:37,288 - INFO - Browser Setup Started: firefox
+2026-02-18 17:24:37,289 - INFO - ====== WebDriver manager ======
+2026-02-18 17:24:38,623 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:24:39,038 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:24:39,473 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:26:01,720 - INFO - Browser Teardown Started
+2026-02-18 17:26:03,962 - INFO - Browser Closed Successfully
+
+2026-02-18 17:26:03,963 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-18 17:26:03,964 - INFO - ------ Test Started: test_filter_product[data0] ------
+2026-02-18 17:26:03,966 - INFO - Browser Setup Started: firefox
+2026-02-18 17:26:03,968 - INFO - ====== WebDriver manager ======
+2026-02-18 17:26:05,071 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:26:05,597 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:26:06,795 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:27:36,451 - INFO - Browser Teardown Started
+2026-02-18 17:27:38,684 - INFO - Browser Closed Successfully
+
+2026-02-18 17:27:38,687 - INFO - ------ Test Finished: test_filter_product[data0] ------
+
+2026-02-18 17:27:38,688 - INFO - ------ Test Started: test_filter_product[data1] ------
+2026-02-18 17:27:38,693 - INFO - Browser Setup Started: firefox
+2026-02-18 17:27:38,694 - INFO - ====== WebDriver manager ======
+2026-02-18 17:27:39,663 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:27:39,779 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:27:39,940 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:28:08,577 - INFO - Browser Teardown Started
+2026-02-18 17:28:10,860 - INFO - Browser Closed Successfully
+
+2026-02-18 17:28:10,862 - INFO - ------ Test Finished: test_filter_product[data1] ------
+
+2026-02-18 17:28:10,862 - INFO - ------ Test Started: test_filter_product[data2] ------
+2026-02-18 17:28:10,865 - INFO - Browser Setup Started: firefox
+2026-02-18 17:28:10,867 - INFO - ====== WebDriver manager ======
+2026-02-18 17:28:11,849 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:28:11,990 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:28:12,126 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:28:26,724 - INFO - Browser Teardown Started
+2026-02-18 17:28:28,997 - INFO - Browser Closed Successfully
+
+2026-02-18 17:28:28,998 - INFO - ------ Test Finished: test_filter_product[data2] ------
+
+2026-02-18 17:28:28,998 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-18 17:28:29,000 - INFO - Browser Setup Started: firefox
+2026-02-18 17:28:29,002 - INFO - ====== WebDriver manager ======
+2026-02-18 17:28:30,028 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:28:30,709 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:28:31,028 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:29:37,016 - INFO - Browser Teardown Started
+2026-02-18 17:29:39,275 - INFO - Browser Closed Successfully
+
+2026-02-18 17:29:39,277 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-18 17:29:39,277 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------
+2026-02-18 17:29:39,280 - INFO - Browser Setup Started: firefox
+2026-02-18 17:29:39,282 - INFO - ====== WebDriver manager ======
+2026-02-18 17:29:40,264 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:29:40,412 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:29:40,557 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:30:18,292 - ERROR - Test Failed: test_findOrdersByUser[data1]
+2026-02-18 17:30:18,292 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_findOrdersByUser[data1]_20260218_173018.png
+2026-02-18 17:30:18,293 - INFO - Browser Teardown Started
+2026-02-18 17:30:20,604 - INFO - Browser Closed Successfully
+
+2026-02-18 17:30:20,605 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------
+
+2026-02-18 17:30:20,606 - INFO - ------ Test Started: test_open_homepage ------
+2026-02-18 17:30:20,607 - INFO - Browser Setup Started: firefox
+2026-02-18 17:30:20,608 - INFO - ====== WebDriver manager ======
+2026-02-18 17:30:21,721 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:30:22,033 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:30:22,273 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:30:52,729 - INFO - Browser Teardown Started
+2026-02-18 17:30:54,961 - INFO - Browser Closed Successfully
+
+2026-02-18 17:30:54,962 - INFO - ------ Test Finished: test_open_homepage ------
+
+2026-02-18 17:30:54,963 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-18 17:30:54,965 - INFO - Browser Setup Started: firefox
+2026-02-18 17:30:54,966 - INFO - ====== WebDriver manager ======
+2026-02-18 17:30:55,981 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:30:56,239 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:30:56,376 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:31:25,399 - INFO - Browser Teardown Started
+2026-02-18 17:31:27,641 - INFO - Browser Closed Successfully
+
+2026-02-18 17:31:27,642 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-18 17:31:27,642 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-18 17:31:27,645 - INFO - Browser Setup Started: firefox
+2026-02-18 17:31:27,646 - INFO - ====== WebDriver manager ======
+2026-02-18 17:31:28,665 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:31:28,796 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:31:28,913 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:32:08,052 - ERROR - Test Failed: test_login[data1]
+2026-02-18 17:32:08,052 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_login[data1]_20260218_173207.png
+2026-02-18 17:32:08,053 - INFO - Browser Teardown Started
+2026-02-18 17:32:10,327 - INFO - Browser Closed Successfully
+
+2026-02-18 17:32:10,328 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-18 17:32:10,328 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-18 17:32:10,330 - INFO - Browser Setup Started: firefox
+2026-02-18 17:32:10,331 - INFO - ====== WebDriver manager ======
+2026-02-18 17:32:11,360 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:32:11,815 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:32:11,947 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:33:04,154 - INFO - Browser Teardown Started
+2026-02-18 17:33:06,443 - INFO - Browser Closed Successfully
+
+2026-02-18 17:33:06,445 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-18 17:33:06,445 - INFO - ------ Test Started: test_logout[data1] ------
+2026-02-18 17:33:06,447 - INFO - Browser Setup Started: firefox
+2026-02-18 17:33:06,448 - INFO - ====== WebDriver manager ======
+2026-02-18 17:33:07,479 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:33:07,605 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:33:07,752 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:33:52,606 - ERROR - Test Failed: test_logout[data1]
+2026-02-18 17:33:52,606 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_logout[data1]_20260218_173352.png
+2026-02-18 17:33:52,607 - INFO - Browser Teardown Started
+2026-02-18 17:33:54,897 - INFO - Browser Closed Successfully
+
+2026-02-18 17:33:54,899 - INFO - ------ Test Finished: test_logout[data1] ------
+
+2026-02-18 17:33:54,900 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-18 17:33:54,902 - INFO - Browser Setup Started: firefox
+2026-02-18 17:33:54,904 - INFO - ====== WebDriver manager ======
+2026-02-18 17:33:55,923 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:33:56,142 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:33:56,380 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:34:36,896 - ERROR - Test Failed: test_place_order_cod[data0]
+2026-02-18 17:34:36,896 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_place_order_cod[data0]_20260218_173436.png
+2026-02-18 17:34:36,897 - INFO - Browser Teardown Started
+2026-02-18 17:34:39,198 - INFO - Browser Closed Successfully
+
+2026-02-18 17:34:39,199 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-18 17:34:39,199 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-18 17:34:39,202 - INFO - Browser Setup Started: firefox
+2026-02-18 17:34:39,204 - INFO - ====== WebDriver manager ======
+2026-02-18 17:34:40,226 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:34:40,421 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:34:40,666 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:35:32,227 - INFO - Browser Teardown Started
+2026-02-18 17:35:34,609 - INFO - Browser Closed Successfully
+
+2026-02-18 17:35:34,611 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-18 17:35:34,611 - INFO - ------ Test Started: test_user_registration ------
+2026-02-18 17:35:34,614 - INFO - Browser Setup Started: firefox
+2026-02-18 17:35:34,615 - INFO - ====== WebDriver manager ======
+2026-02-18 17:35:35,672 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:35:35,902 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:35:36,095 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:36:17,083 - ERROR - Test Failed: test_user_registration
+2026-02-18 17:36:17,083 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_user_registration_20260218_173616.png
+2026-02-18 17:36:17,084 - INFO - Browser Teardown Started
+2026-02-18 17:36:19,343 - INFO - Browser Closed Successfully
+
+2026-02-18 17:36:19,345 - INFO - ------ Test Finished: test_user_registration ------
+
+2026-02-18 17:36:19,346 - INFO - ------ Test Started: test_remove_product ------
+2026-02-18 17:36:19,349 - INFO - Browser Setup Started: firefox
+2026-02-18 17:36:19,350 - INFO - ====== WebDriver manager ======
+2026-02-18 17:36:20,374 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:36:20,687 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:36:20,915 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:37:19,930 - INFO - Browser Teardown Started
+2026-02-18 17:37:22,399 - INFO - Browser Closed Successfully
+
+2026-02-18 17:37:22,400 - INFO - ------ Test Finished: test_remove_product ------
+
+2026-02-18 17:37:22,400 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-18 17:37:22,403 - INFO - Browser Setup Started: firefox
+2026-02-18 17:37:22,404 - INFO - ====== WebDriver manager ======
+2026-02-18 17:37:24,066 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:37:24,195 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:37:24,348 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:38:06,468 - INFO - Browser Teardown Started
+2026-02-18 17:38:08,770 - INFO - Browser Closed Successfully
+
+2026-02-18 17:38:08,770 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-18 17:38:08,771 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-18 17:38:08,772 - INFO - Browser Setup Started: firefox
+2026-02-18 17:38:08,772 - INFO - ====== WebDriver manager ======
+2026-02-18 17:38:09,831 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:38:09,992 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:38:10,143 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:38:59,090 - ERROR - Test Failed: test_search_product[data1]
+2026-02-18 17:38:59,090 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\screenshots\test_search_product[data1]_20260218_173858.png
+2026-02-18 17:38:59,091 - INFO - Browser Teardown Started
+2026-02-18 17:39:01,417 - INFO - Browser Closed Successfully
+
+2026-02-18 17:39:01,418 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-18 17:39:01,418 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-18 17:39:01,420 - INFO - Browser Setup Started: firefox
+2026-02-18 17:39:01,421 - INFO - ====== WebDriver manager ======
+2026-02-18 17:39:02,721 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:39:02,987 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:39:03,337 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:40:07,550 - INFO - Browser Teardown Started
+2026-02-18 17:40:09,784 - INFO - Browser Closed Successfully
+
+2026-02-18 17:40:09,786 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-18 17:40:09,786 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-18 17:40:09,789 - INFO - Browser Setup Started: firefox
+2026-02-18 17:40:09,790 - INFO - ====== WebDriver manager ======
+2026-02-18 17:40:10,801 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:40:11,031 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:40:11,300 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:40:47,338 - INFO - Browser Teardown Started
+2026-02-18 17:40:49,579 - INFO - Browser Closed Successfully
+
+2026-02-18 17:40:49,580 - INFO - ------ Test Finished: test_sort_products[data1] ------
+
+2026-02-18 17:40:49,581 - INFO - ------ Test Started: test_sort_products[data2] ------
+2026-02-18 17:40:49,584 - INFO - Browser Setup Started: firefox
+2026-02-18 17:40:49,586 - INFO - ====== WebDriver manager ======
+2026-02-18 17:40:50,599 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:40:50,914 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:40:51,191 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:41:21,476 - INFO - Browser Teardown Started
+2026-02-18 17:41:23,745 - INFO - Browser Closed Successfully
+
+2026-02-18 17:41:23,746 - INFO - ------ Test Finished: test_sort_products[data2] ------
+
+2026-02-18 17:41:23,747 - INFO - ------ Test Started: test_sort_products[data3] ------
+2026-02-18 17:41:23,749 - INFO - Browser Setup Started: firefox
+2026-02-18 17:41:23,750 - INFO - ====== WebDriver manager ======
+2026-02-18 17:41:24,762 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:41:25,087 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:41:25,256 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:41:49,526 - INFO - Browser Teardown Started
+2026-02-18 17:41:51,798 - INFO - Browser Closed Successfully
+
+2026-02-18 17:41:51,799 - INFO - ------ Test Finished: test_sort_products[data3] ------
+
+2026-02-18 17:41:51,800 - INFO - ------ Test Started: test_sort_products[data4] ------
+2026-02-18 17:41:51,802 - INFO - Browser Setup Started: firefox
+2026-02-18 17:41:51,803 - INFO - ====== WebDriver manager ======
+2026-02-18 17:41:52,849 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:41:53,066 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:41:53,266 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:42:31,035 - INFO - Browser Teardown Started
+2026-02-18 17:42:33,323 - INFO - Browser Closed Successfully
+
+2026-02-18 17:42:33,324 - INFO - ------ Test Finished: test_sort_products[data4] ------
+
+2026-02-18 17:42:33,325 - INFO - ------ Test Started: test_sort_products[data5] ------
+2026-02-18 17:42:33,327 - INFO - Browser Setup Started: firefox
+2026-02-18 17:42:33,328 - INFO - ====== WebDriver manager ======
+2026-02-18 17:42:34,397 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:42:34,617 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:42:34,858 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:42:58,192 - INFO - Browser Teardown Started
+2026-02-18 17:43:00,439 - INFO - Browser Closed Successfully
+
+2026-02-18 17:43:00,441 - INFO - ------ Test Finished: test_sort_products[data5] ------
+
+2026-02-18 17:43:00,446 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 17:43:00,446 - INFO - Total Tests Collected: 23

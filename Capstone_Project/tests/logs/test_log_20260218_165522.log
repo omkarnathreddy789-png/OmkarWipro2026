@@ -1,0 +1,51 @@
+2026-02-18 16:55:22,857 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 16:55:23,185 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-18 16:55:23,190 - INFO - Browser Setup Started
+2026-02-18 16:55:23,194 - INFO - ====== WebDriver manager ======
+2026-02-18 16:55:24,991 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:55:25,240 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:55:25,548 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:57:24,800 - INFO - Browser Teardown Started
+2026-02-18 16:57:27,109 - INFO - Browser Closed Successfully
+
+2026-02-18 16:57:27,111 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-18 16:57:27,112 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-18 16:57:27,113 - INFO - Browser Setup Started
+2026-02-18 16:57:27,114 - INFO - ====== WebDriver manager ======
+2026-02-18 16:57:28,154 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:57:28,437 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:57:28,747 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:58:39,562 - ERROR - Test Failed: test_login[data1]
+2026-02-18 16:58:39,562 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_login[data1]_20260218_165839.png
+2026-02-18 16:58:39,564 - INFO - Browser Teardown Started
+2026-02-18 16:58:41,875 - INFO - Browser Closed Successfully
+
+2026-02-18 16:58:41,880 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-18 16:58:41,881 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-18 16:58:41,882 - INFO - Browser Setup Started
+2026-02-18 16:58:41,884 - INFO - ====== WebDriver manager ======
+2026-02-18 16:58:43,053 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:58:44,671 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:58:46,107 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:01:09,943 - INFO - Browser Teardown Started
+2026-02-18 17:01:12,290 - INFO - Browser Closed Successfully
+
+2026-02-18 17:01:12,291 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-18 17:01:12,291 - INFO - ------ Test Started: test_logout[data1] ------
+2026-02-18 17:01:12,292 - INFO - Browser Setup Started
+2026-02-18 17:01:12,293 - INFO - ====== WebDriver manager ======
+2026-02-18 17:01:13,474 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:01:13,933 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:01:14,317 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 17:03:09,161 - ERROR - Test Failed: test_logout[data1]
+2026-02-18 17:03:09,162 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_logout[data1]_20260218_170309.png
+2026-02-18 17:03:09,163 - INFO - Browser Teardown Started
+2026-02-18 17:03:11,446 - INFO - Browser Closed Successfully
+
+2026-02-18 17:03:11,452 - INFO - ------ Test Finished: test_logout[data1] ------
+
+2026-02-18 17:03:11,456 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 17:03:11,457 - INFO - Total Tests Collected: 4

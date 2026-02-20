@@ -1,0 +1,7 @@
+2026-02-18 17:55:02,898 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 17:55:02,997 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-18 17:55:03,001 - INFO - Browser Setup Started: chrome
+2026-02-18 17:55:03,001 - INFO - ====== WebDriver manager ======
+2026-02-18 17:55:04,086 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:55:04,296 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 17:55:04,551 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache

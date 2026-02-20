@@ -1,0 +1,27 @@
+2026-02-18 16:25:18,541 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 16:25:18,577 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-18 16:25:18,579 - INFO - Browser Setup Started
+2026-02-18 16:25:18,581 - INFO - ====== WebDriver manager ======
+2026-02-18 16:25:20,659 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:25:21,021 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:25:21,293 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:26:44,188 - ERROR - Test Failed: test_place_order_cod[data0]
+2026-02-18 16:26:44,189 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data0]_20260218_162644.png
+2026-02-18 16:26:44,190 - INFO - Browser Teardown Started
+2026-02-18 16:26:46,475 - INFO - Browser Closed Successfully
+
+2026-02-18 16:26:46,482 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-18 16:26:46,482 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-18 16:26:46,484 - INFO - Browser Setup Started
+2026-02-18 16:26:46,485 - INFO - ====== WebDriver manager ======
+2026-02-18 16:26:47,733 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:26:47,988 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:26:48,209 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:26:51,423 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-18 16:26:51,864 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 16:26:51,911 - INFO - Total Tests Collected: 2
+2026-02-18 16:26:51,915 - INFO - Browser Teardown Started
+2026-02-18 16:26:54,046 - INFO - Browser Closed Successfully
+

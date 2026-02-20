@@ -1,0 +1,62 @@
+2026-02-19 09:15:05,540 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 09:15:05,937 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 09:15:05,946 - INFO - Total test data rows loaded: 3
+2026-02-19 09:15:05,948 - INFO - ------ Test Started: test_filter_product[data0] ------
+2026-02-19 09:15:05,950 - INFO - Browser Setup Started: chrome
+2026-02-19 09:15:05,951 - INFO - ====== WebDriver manager ======
+2026-02-19 09:15:07,033 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:15:07,177 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:15:07,289 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 09:15:13,624 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-19 09:15:13,624 - INFO - Navigating to Shop page
+2026-02-19 09:15:16,418 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 09:15:16,430 - INFO - Applying price filter -> Min: 150.0, Max: 300.0
+2026-02-19 09:15:16,589 - INFO - Price filter applied successfully
+2026-02-19 09:15:24,076 - INFO - Number of products displayed after filtering: 4
+2026-02-19 09:15:24,084 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=150.0&max_price=300.0
+2026-02-19 09:15:24,091 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-19 09:15:24,094 - INFO - Browser Teardown Started
+2026-02-19 09:15:26,340 - INFO - Browser Closed Successfully
+
+2026-02-19 09:15:26,342 - INFO - ------ Test Finished: test_filter_product[data0] ------
+
+2026-02-19 09:15:26,342 - INFO - ------ Test Started: test_filter_product[data1] ------
+2026-02-19 09:15:26,343 - INFO - Browser Setup Started: chrome
+2026-02-19 09:15:26,344 - INFO - ====== WebDriver manager ======
+2026-02-19 09:15:27,331 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:15:27,477 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:15:27,602 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 09:15:44,041 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-19 09:15:44,041 - INFO - Navigating to Shop page
+2026-02-19 09:16:27,829 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 09:16:27,835 - INFO - Applying price filter -> Min: 200.0, Max: 400.0
+2026-02-19 09:16:51,841 - INFO - Price filter applied successfully
+2026-02-19 09:16:51,855 - INFO - Number of products displayed after filtering: 4
+2026-02-19 09:16:51,862 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=200.0&max_price=400.0
+2026-02-19 09:16:51,868 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-19 09:16:51,870 - INFO - Browser Teardown Started
+2026-02-19 09:16:54,197 - INFO - Browser Closed Successfully
+
+2026-02-19 09:16:54,201 - INFO - ------ Test Finished: test_filter_product[data1] ------
+
+2026-02-19 09:16:54,201 - INFO - ------ Test Started: test_filter_product[data2] ------
+2026-02-19 09:16:54,202 - INFO - Browser Setup Started: chrome
+2026-02-19 09:16:54,203 - INFO - ====== WebDriver manager ======
+2026-02-19 09:16:55,151 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:16:55,639 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 09:16:56,615 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 09:17:24,170 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-19 09:17:24,170 - INFO - Navigating to Shop page
+2026-02-19 09:17:36,578 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 09:17:36,583 - INFO - Applying price filter -> Min: 250.0, Max: 500.0
+2026-02-19 09:17:36,741 - INFO - Price filter applied successfully
+2026-02-19 09:17:39,160 - INFO - Number of products displayed after filtering: 6
+2026-02-19 09:17:39,179 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=250.0&max_price=500.0
+2026-02-19 09:17:39,185 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-19 09:17:39,187 - INFO - Browser Teardown Started
+2026-02-19 09:17:41,457 - INFO - Browser Closed Successfully
+
+2026-02-19 09:17:41,459 - INFO - ------ Test Finished: test_filter_product[data2] ------
+
+2026-02-19 09:17:41,461 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 09:17:41,462 - INFO - Total Tests Collected: 3

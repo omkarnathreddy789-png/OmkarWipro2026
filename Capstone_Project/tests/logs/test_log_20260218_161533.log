@@ -1,0 +1,29 @@
+2026-02-18 16:15:33,569 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 16:15:33,619 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-18 16:15:33,621 - INFO - Browser Setup Started
+2026-02-18 16:15:33,622 - INFO - ====== WebDriver manager ======
+2026-02-18 16:15:34,844 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:15:35,036 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:15:35,149 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:16:31,946 - ERROR - Test Failed: test_place_order_cod[data0]
+2026-02-18 16:16:31,948 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data0]_20260218_161631.png
+2026-02-18 16:16:31,951 - INFO - Browser Teardown Started
+2026-02-18 16:16:34,821 - INFO - Browser Closed Successfully
+
+2026-02-18 16:16:34,824 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-18 16:16:34,824 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-18 16:16:34,825 - INFO - Browser Setup Started
+2026-02-18 16:16:34,825 - INFO - ====== WebDriver manager ======
+2026-02-18 16:16:36,187 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:16:36,731 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 16:16:37,131 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 16:18:02,661 - ERROR - Test Failed: test_place_order_cod[data1]
+2026-02-18 16:18:02,661 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data1]_20260218_161802.png
+2026-02-18 16:18:02,662 - INFO - Browser Teardown Started
+2026-02-18 16:18:04,997 - INFO - Browser Closed Successfully
+
+2026-02-18 16:18:05,006 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-18 16:18:05,010 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 16:18:05,011 - INFO - Total Tests Collected: 2

@@ -1,0 +1,16 @@
+2026-02-18 14:43:29,834 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-18 14:43:29,868 - INFO - ------ Test Started: test_user_registration ------
+2026-02-18 14:43:29,869 - INFO - Browser Setup Started
+2026-02-18 14:43:29,871 - INFO - ====== WebDriver manager ======
+2026-02-18 14:43:31,407 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:43:31,517 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-18 14:43:31,614 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-18 14:43:50,720 - ERROR - Test Failed: test_user_registration
+2026-02-18 14:43:50,720 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_user_registration_20260218_144350.png
+2026-02-18 14:43:50,723 - INFO - Browser Teardown Started
+2026-02-18 14:43:53,080 - INFO - Browser Closed Successfully
+
+2026-02-18 14:43:53,082 - INFO - ------ Test Finished: test_user_registration ------
+
+2026-02-18 14:43:53,086 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-18 14:43:53,086 - INFO - Total Tests Collected: 1

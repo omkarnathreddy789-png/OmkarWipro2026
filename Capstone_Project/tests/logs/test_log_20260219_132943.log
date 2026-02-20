@@ -1,0 +1,59 @@
+2026-02-19 13:29:43,143 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 13:29:43,537 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:29:43,546 - INFO - Total test data rows loaded: 2
+2026-02-19 13:29:43,549 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-19 13:29:43,551 - INFO - Browser Setup Started: chrome
+2026-02-19 13:29:43,551 - INFO - ====== WebDriver manager ======
+2026-02-19 13:29:44,596 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:29:44,708 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:29:44,808 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 13:29:52,469 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-19 13:29:52,470 - INFO - Navigating to Shop page
+2026-02-19 13:29:56,120 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 13:29:56,120 - INFO - Adding product to basket
+2026-02-19 13:29:56,182 - INFO - Viewing basket
+2026-02-19 13:29:57,555 - INFO - Proceeding to checkout
+2026-02-19 13:29:59,871 - INFO - Filling billing details
+2026-02-19 13:30:00,814 - INFO - Selecting country: IN
+2026-02-19 13:30:00,825 - INFO - Entering address details
+2026-02-19 13:30:01,701 - INFO - Entering order notes
+2026-02-19 13:30:02,005 - INFO - Selecting payment method: cod
+2026-02-19 13:30:02,057 - INFO - Clicking Place Order button
+2026-02-19 13:30:04,856 - INFO - Verifying order success message
+2026-02-19 13:30:04,857 - INFO - Waiting for success message
+2026-02-19 13:30:04,889 - INFO - Success Message Received: Thank you. Your order has been received.
+2026-02-19 13:30:04,890 - INFO - ========== PLACE ORDER TEST PASSED ==========
+2026-02-19 13:30:04,891 - INFO - Browser Teardown Started
+2026-02-19 13:30:07,166 - INFO - Browser Closed Successfully
+
+2026-02-19 13:30:07,168 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-19 13:30:07,168 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-19 13:30:07,171 - INFO - Browser Setup Started: chrome
+2026-02-19 13:30:07,172 - INFO - ====== WebDriver manager ======
+2026-02-19 13:30:08,201 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:30:08,305 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:30:08,419 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 13:30:17,580 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-19 13:30:17,581 - INFO - Navigating to Shop page
+2026-02-19 13:30:22,219 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-19 13:30:22,219 - INFO - Adding product to basket
+2026-02-19 13:30:22,276 - INFO - Viewing basket
+2026-02-19 13:30:24,395 - INFO - Proceeding to checkout
+2026-02-19 13:30:25,569 - INFO - Filling billing details
+2026-02-19 13:30:26,672 - INFO - Selecting country: IN
+2026-02-19 13:30:26,683 - INFO - Entering address details
+2026-02-19 13:30:27,623 - INFO - Entering order notes
+2026-02-19 13:30:27,866 - INFO - Selecting payment method: bacs
+2026-02-19 13:30:27,915 - INFO - Clicking Place Order button
+2026-02-19 13:30:29,773 - INFO - Verifying order success message
+2026-02-19 13:30:29,774 - INFO - Waiting for success message
+2026-02-19 13:30:29,809 - INFO - Success Message Received: Thank you. Your order has been received.
+2026-02-19 13:30:29,810 - INFO - ========== PLACE ORDER TEST PASSED ==========
+2026-02-19 13:30:29,811 - INFO - Browser Teardown Started
+2026-02-19 13:30:32,113 - INFO - Browser Closed Successfully
+
+2026-02-19 13:30:32,115 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-19 13:30:32,117 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 13:30:32,118 - INFO - Total Tests Collected: 2

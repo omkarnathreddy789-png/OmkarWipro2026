@@ -1,0 +1,57 @@
+2026-02-19 08:31:11,918 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 08:31:13,132 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-19 08:31:13,145 - INFO - Browser Setup Started: chrome
+2026-02-19 08:31:13,147 - INFO - ====== WebDriver manager ======
+2026-02-19 08:31:14,453 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:31:14,894 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:31:15,089 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:31:15,898 - INFO - WebDriver version 144.0.7559.133 selected
+2026-02-19 08:31:15,903 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/win32/chromedriver-win32.zip
+2026-02-19 08:31:15,904 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/win32/chromedriver-win32.zip
+2026-02-19 08:31:16,199 - INFO - Driver downloading response is 200
+2026-02-19 08:31:30,442 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:31:30,864 - INFO - Driver has been saved in cache [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133]
+2026-02-19 08:31:57,340 - INFO - Browser Teardown Started
+2026-02-19 08:31:59,644 - INFO - Browser Closed Successfully
+
+2026-02-19 08:31:59,645 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-19 08:31:59,645 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-19 08:31:59,647 - INFO - Browser Setup Started: chrome
+2026-02-19 08:31:59,648 - INFO - ====== WebDriver manager ======
+2026-02-19 08:32:01,355 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:32:02,205 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:32:02,428 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:32:35,380 - ERROR - Test Failed: test_login[data1]
+2026-02-19 08:32:35,380 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_login[data1]_20260219_083235.png
+2026-02-19 08:32:35,382 - INFO - Browser Teardown Started
+2026-02-19 08:32:37,991 - INFO - Browser Closed Successfully
+
+2026-02-19 08:32:37,994 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-19 08:32:37,995 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-19 08:32:38,001 - INFO - Browser Setup Started: chrome
+2026-02-19 08:32:38,004 - INFO - ====== WebDriver manager ======
+2026-02-19 08:32:39,464 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:32:39,666 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:32:39,859 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:33:16,332 - INFO - Browser Teardown Started
+2026-02-19 08:33:18,658 - INFO - Browser Closed Successfully
+
+2026-02-19 08:33:18,662 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-19 08:33:18,662 - INFO - ------ Test Started: test_logout[data1] ------
+2026-02-19 08:33:18,664 - INFO - Browser Setup Started: chrome
+2026-02-19 08:33:18,665 - INFO - ====== WebDriver manager ======
+2026-02-19 08:33:19,723 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:33:19,977 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 08:33:20,336 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 08:33:51,985 - ERROR - Test Failed: test_logout[data1]
+2026-02-19 08:33:51,986 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_logout[data1]_20260219_083351.png
+2026-02-19 08:33:51,988 - INFO - Browser Teardown Started
+2026-02-19 08:33:54,407 - INFO - Browser Closed Successfully
+
+2026-02-19 08:33:54,408 - INFO - ------ Test Finished: test_logout[data1] ------
+
+2026-02-19 08:33:54,412 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 08:33:54,412 - INFO - Total Tests Collected: 4

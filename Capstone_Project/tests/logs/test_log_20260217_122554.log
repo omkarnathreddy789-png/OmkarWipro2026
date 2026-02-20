@@ -1,0 +1,33 @@
+2026-02-17 12:25:54,323 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-17 12:25:54,498 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-17 12:25:54,501 - INFO - ====== WebDriver manager ======
+2026-02-17 12:25:56,101 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:25:57,910 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:25:58,872 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-17 12:26:40,202 - INFO - Browser Teardown Started
+2026-02-17 12:26:42,495 - INFO - Browser Closed Successfully
+
+2026-02-17 12:26:42,497 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-17 12:26:42,498 - INFO - ------ Test Started: test_open_homepage ------
+2026-02-17 12:26:42,502 - INFO - ====== WebDriver manager ======
+2026-02-17 12:26:43,509 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:26:44,088 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:26:59,778 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-17 12:27:21,904 - INFO - Browser Teardown Started
+2026-02-17 12:27:24,128 - INFO - Browser Closed Successfully
+
+2026-02-17 12:27:24,129 - INFO - ------ Test Finished: test_open_homepage ------
+
+2026-02-17 12:27:24,130 - INFO - ------ Test Started: test_login_after_registration ------
+2026-02-17 12:27:24,135 - INFO - ====== WebDriver manager ======
+2026-02-17 12:27:25,123 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:27:25,264 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-17 12:27:25,413 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-17 12:27:51,309 - INFO - Browser Teardown Started
+2026-02-17 12:27:53,593 - INFO - Browser Closed Successfully
+
+2026-02-17 12:27:53,594 - INFO - ------ Test Finished: test_login_after_registration ------
+
+2026-02-17 12:27:53,597 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-17 12:27:53,597 - INFO - Total Tests Collected: 3

@@ -1,0 +1,28 @@
+2026-02-19 13:28:59,090 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-19 13:28:59,533 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,543 - INFO - Total test data rows loaded: 3
+2026-02-19 13:28:59,548 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,558 - INFO - Total test data rows loaded: 2
+2026-02-19 13:28:59,562 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,572 - INFO - Total test data rows loaded: 2
+2026-02-19 13:28:59,577 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,585 - INFO - Total test data rows loaded: 2
+2026-02-19 13:28:59,595 - INFO - Reading search data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,604 - INFO - Total test data rows loaded: 2
+2026-02-19 13:28:59,608 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-19 13:28:59,616 - INFO - Total test data rows loaded: 6
+2026-02-19 13:28:59,619 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-19 13:28:59,621 - INFO - Browser Setup Started: chrome
+2026-02-19 13:28:59,621 - INFO - ====== WebDriver manager ======
+2026-02-19 13:29:00,678 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:29:00,789 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-19 13:29:00,889 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\144.0.7559.133\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-19 13:29:09,120 - INFO - ========== STARTING ADD PRODUCT TO CART TEST ==========
+2026-02-19 13:29:09,120 - INFO - Navigating to Shop page
+2026-02-19 13:29:11,442 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-19 13:29:11,485 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-19 13:29:11,489 - INFO - Total Tests Collected: 23
+2026-02-19 13:29:11,491 - INFO - Browser Teardown Started
+2026-02-19 13:29:13,623 - INFO - Browser Closed Successfully
+

@@ -1,0 +1,4 @@
+*** Test Cases ***;${EMAIL};${PASSWORD};${FIRSTNAME};${LASTNAME};${PHONE};${CITY};${POSTCODE};${EXPECTED}
+User1;testuser1@test.com;Omkar@2003;Omkar;Reddy;9876543210;Hyderabad;500001;PASS
+User2;testuser2@test.com;Wrong123;;;9876543222;Chennai;600001;FAIL
+User3;testuser3@test.com;;Anil;Varma;;Bangalore;560001;FAIL

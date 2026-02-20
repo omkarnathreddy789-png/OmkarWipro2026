@@ -1,0 +1,75 @@
+1771562302723	geckodriver	INFO	Listening on 127.0.0.1:62319
+1771562305834	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62320" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\91799\\AppData\\Local\\Temp\\rust_mozprofileCFoExZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1771562306231	Marionette	INFO	Marionette enabled
+1771562306349	Marionette	INFO	Listening on port 62327
+WebDriver BiDi listening on ws://127.0.0.1:62320
+Read port: 62327
+1771562306577	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval line 1181 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval, line 1181: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval line 1181 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VXNW79gqQX8ZcaCZgbEoDHet6f6szJZilX3LzAyYl-4.js line 2 > eval line 1181 > eval line 1 > eval line 1 > eval, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practice.automationtesting.in."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practice.automationtesting.in."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js, line 82: Script terminated by timeout at:
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:506
+N/</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:93:473
+M/this.Wd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:990
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:523
+n.Wd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:523
+kp/</h/<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:261:1966
+Ua@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:51:339
+Pa.prototype.flush@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:51:147
+Ta@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:50:483
+Mh/c/</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:146:293
+qc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:83:218
+n.Wd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:523
+qg/</</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:123:515
+Oa.prototype.kc/<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:50:315
+qg/</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:123:524
+qc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:83:218
+n.Wd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:523
+qg/</</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:123:515
+Oa.prototype.kc/<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:50:315
+qg/</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:123:524
+qc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:83:218
+n.Wd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:82:523
+h@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:95:477
+
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1771562315898	Marionette	INFO	Stopped listening on port 62327
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.

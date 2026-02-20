@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.10.5 on win32)" generated="2026-02-20T12:13:25.996241" rpa="false" schemaversion="5">
+<suite id="s1" name="Logout Validation" source="C:\Users\91799\PycharmProjects\WIPRO 2026\CapstoneProject\robot-framework\tests\logout_validation.robot">
+<kw name="Open Application" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:26.220854" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T12:13:26.220854" elapsed="5.199051"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T12:13:31.420904" elapsed="0.035814"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-20T12:13:31.457729" elapsed="0.001997"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:26.219857" elapsed="5.240869"/>
+</kw>
+<test id="s1-t1" name="Logout Validation" line="21">
+<kw name="Go To Fresh Login Page" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:31.462724" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>https://practice.automationtesting.in/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T12:13:31.462724" elapsed="2.128658"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Logout User" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:33.595127" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>https://practice.automationtesting.in/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T12:13:33.593607" elapsed="1.068339"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=body</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T12:13:34.661946" elapsed="0.023883"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:34.687884" level="INFO">Clicking element 'xpath=//a[text()='Logout']'.</msg>
+<msg time="2026-02-20T12:13:34.970843" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-20T12:13:34.971840" level="FAIL">Element with locator 'xpath=//a[text()='Logout']' not found.</msg>
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-20T12:13:34.686894" elapsed="0.289020">Element with locator 'xpath=//a[text()='Logout']' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-20T12:13:34.685829" elapsed="0.290085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T12:13:34.975914" elapsed="0.061623"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:33.593607" elapsed="1.443930"/>
+</kw>
+<arg>Logout User</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-20T12:13:33.592587" elapsed="1.444950"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:35.037537" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>https://practice.automationtesting.in/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T12:13:35.037537" elapsed="0.994514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T12:13:36.033027" elapsed="0.036351"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:31.461725" elapsed="4.607653"/>
+</kw>
+<kw name="Login User" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:36.071378" level="INFO">Typing text 'testuser1@test.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T12:13:36.071378" elapsed="0.127304"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:36.199700" level="INFO">Typing text 'Omkar@2003' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T12:13:36.199700" elapsed="0.294352"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:36.495065" level="INFO">Clicking button 'name=login'.</msg>
+<arg>name=login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T12:13:36.495065" elapsed="0.118489"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-02-20T12:13:36.070377" elapsed="0.544189"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=div.woocommerce-MyAccount-content</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T12:13:36.615074" elapsed="2.922817"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:39.538877" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>https://practice.automationtesting.in/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T12:13:39.538877" elapsed="1.813527"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=body</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T12:13:41.352404" elapsed="0.013728"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:41.368148" level="INFO">Clicking element 'xpath=//a[text()='Logout']'.</msg>
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T12:13:41.368148" elapsed="2.740401"/>
+</kw>
+<arg>Click Element</arg>
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-20T12:13:41.367153" elapsed="2.742560"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T12:13:44.109713" elapsed="0.037196"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:39.537891" elapsed="4.609018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T12:13:44.147907" elapsed="0.031487"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:44.195780" level="INFO">Current page contains element 'css=input[name="login"]'.</msg>
+<arg>css=input[name="login"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-02-20T12:13:44.179394" elapsed="0.016386"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-02-20T12:13:44.209414" level="INFO">Current page does not contain element 'css=div.woocommerce-MyAccount-content'.</msg>
+<arg>css=div.woocommerce-MyAccount-content</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-02-20T12:13:44.196781" elapsed="0.012633"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:31.460726" elapsed="12.749792"/>
+</test>
+<kw name="Close Application" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-20T12:13:44.212551" elapsed="2.226394"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:44.212551" elapsed="2.226394"/>
+</kw>
+<status status="PASS" start="2026-02-20T12:13:25.998244" elapsed="20.440701"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logout Validation" id="s1" pass="1" fail="0" skip="0">Logout Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

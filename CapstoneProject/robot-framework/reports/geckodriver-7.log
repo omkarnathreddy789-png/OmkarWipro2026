@@ -1,0 +1,58 @@
+1771562590270	geckodriver	INFO	Listening on 127.0.0.1:57941
+1771562593386	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57942" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\91799\\AppData\\Local\\Temp\\rust_mozprofile1iZtxU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1771562593773	Marionette	INFO	Marionette enabled
+1771562593903	Marionette	INFO	Listening on port 57949
+WebDriver BiDi listening on ws://127.0.0.1:57942
+Read port: 57949
+1771562594092	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practice.automationtesting.in."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practice.automationtesting.in."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 90: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1771562603363	Marionette	INFO	Stopped listening on port 57949
+Dynamically enable window occlusion 1
+JavaScript warning: https://tpc.googlesyndication.com/pagead/js/r20260218/r20110914/client/qs_click_protection_fy2021.js, line 31: Script terminated by timeout at:
+Yb/c<@https://tpc.googlesyndication.com/pagead/js/r20260218/r20110914/client/qs_click_protection_fy2021.js:31:336
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval, line 1: Script terminated by timeout at:
+fy@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:120
+Vh@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:39
+SV@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:108
+@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:86
+yF@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:258
+XL@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval line 369 > eval line 1 > eval line 1 > eval:1:122
+t.v</<@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:52652
+Bb@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:21907
+m@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:12013
+Y@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:7005
+m/<@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:12721
+hq</<@https://pagead2.googlesyndication.com/bg/BeM-_pPoFmyq5qK3PRkBRDsPZdY_LoE3wB-7W016Trw.js line 2 > eval:369:48641
+
+JavaScript warning: https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202602120101/reactive_library_fy2021.js?bust=31096796, line 123: Script terminated by timeout at:
+aa/<@https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202602120101/reactive_library_fy2021.js?bust=31096796:123:839
+
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.

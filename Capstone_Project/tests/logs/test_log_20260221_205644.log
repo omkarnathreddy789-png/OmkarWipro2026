@@ -1,0 +1,26 @@
+2026-02-21 20:56:44,950 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-21 20:56:45,407 - INFO - Reading registration data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-21 20:56:45,424 - INFO - Total test data rows loaded: 1
+2026-02-21 20:56:45,426 - INFO - ------ Test Started: test_user_registration[data0] ------
+2026-02-21 20:56:45,428 - INFO - Browser Setup Started: chrome
+2026-02-21 20:56:45,430 - INFO - ====== WebDriver manager ======
+2026-02-21 20:56:46,572 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 20:56:46,793 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 20:56:47,552 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 20:56:54,866 - INFO - ========== STARTING USER REGISTRATION TEST ==========
+2026-02-21 20:56:54,866 - INFO - Clicking on Sign Up / My Account link
+2026-02-21 20:56:56,573 - INFO - Verifying registration page is loaded
+2026-02-21 20:56:56,602 - INFO - Entering email: Neeraja43@gmail.com
+2026-02-21 20:56:56,711 - INFO - Entering password
+2026-02-21 20:57:05,473 - INFO - Clicking Register button
+2026-02-21 20:57:06,633 - INFO - Validating successful registration (Logout link visible)
+2026-02-21 20:57:16,780 - INFO - Operation Failed Due To User Already Exists
+2026-02-21 20:57:17,095 - ERROR - Test Failed: test_user_registration[data0]
+2026-02-21 20:57:17,095 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_user_registration[data0]_20260221_205716.png
+2026-02-21 20:57:17,097 - INFO - Browser Teardown Started
+2026-02-21 20:57:19,529 - INFO - Browser Closed Successfully
+
+2026-02-21 20:57:19,530 - INFO - ------ Test Finished: test_user_registration[data0] ------
+
+2026-02-21 20:57:19,533 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-21 20:57:19,533 - INFO - Total Tests Collected: 1

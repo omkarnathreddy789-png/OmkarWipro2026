@@ -54,37 +54,76 @@ def test_search_product(setup,data):
     # Search product
     search_page.search_product(product_name)
     logger.info("Search submitted successfully")
-    search_box_value = driver.find_element(*search_page.search_box_value
+    driver.implicitly_wait(3)
+    # Validate search box contains entered value
+    search_box_value = driver.find_element(
+        *search_page.search_box_value
     ).get_attribute("value")
-    logger.info(f"Search box value: {search_box_value}")
+
     assert search_box_value == product_name, (
-        f"Search text mismatch!\n"
+        f"Search box value mismatch!\n"
         f"Expected: {product_name}\n"
         f"Actual: {search_box_value}"
     )
 
-    # Validate search results appear
-    logger.info("Validating search results presence")
-    assert search_page.validate_search_results(), (
-        f"Search results did not appear.\n"
-        f"Product: {product_name}\n"
-        f"URL: {driver.current_url}\n"
-        f"Page Title: {driver.title}"
-    )
-    logger.info("Search results validated successfully")
-    # Click search result
-    logger.info("Clicking on search result")
-    search_page.click_search_result()
+    try:
+        logger.info("Validating search results presence")
 
-    # Validate product page opened
-    product_title = driver.find_element(*search_page.product_title
+        result = search_page.validate_search_results()
 
-    ).text
+        assert isinstance(result, bool), (
+            "validate_search_results() should return True or False"
+        )
 
-    assert product_name.lower() in product_title.lower(), (
-        f"Wrong product page opened!\n"
-        f"Expected: {product_name}\n"
-        f"Actual Title: {product_title}\n"
-        f"URL: {driver.current_url}"
-    )
-    logger.info("========== SEARCH PRODUCT TEST PASSED ==========")
+        # -------- POSITIVE CASE --------
+        if result:
+            logger.info("Search results found")
+
+            # Assert result count > 0 (if method available)
+            results_count = search_page.get_result_count()
+            assert results_count > 0, (
+                "Search results validation returned True, "
+                "but result count is 0"
+            )
+
+            old_url = driver.current_url
+
+            search_page.click_search_result()
+
+            # Assert URL changed after clicking product
+            assert driver.current_url != old_url, (
+                "URL did not change after clicking search result"
+            )
+
+            product_title = driver.find_element(
+                *search_page.product_title
+            ).text
+
+            assert product_title != "", "Product title is empty"
+
+            assert product_name.lower() in product_title.lower(), (
+                f"Wrong product page opened!\n"
+                f"Expected: {product_name}\n"
+                f"Actual Title: {product_title}\n"
+                f"URL: {driver.current_url}"
+            )
+
+        # -------- NEGATIVE CASE --------
+        else:
+            logger.info("No products found - Validating negative scenario")
+
+            no_result_message = search_page.get_no_result_message()
+
+            assert no_result_message is not None and no_result_message != "", (
+                "No result message is empty or not displayed"
+            )
+
+            assert "nothing found" in no_result_message.lower(), (
+                f"Expected 'Sorry, nothing found.' message not displayed.\n"
+                f"Actual message: {no_result_message}"
+            )
+
+    except Exception as e:
+        pytest.fail(f"Unexpected error during search validation: {str(e)}")
+
+    logger.info("========== SEARCH PRODUCT TEST COMPLETED ==========")

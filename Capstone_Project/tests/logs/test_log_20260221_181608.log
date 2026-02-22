@@ -1,0 +1,43 @@
+2026-02-21 18:16:08,890 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-21 18:16:09,274 - INFO - Reading search data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-21 18:16:09,283 - INFO - Total test data rows loaded: 2
+2026-02-21 18:16:09,285 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-21 18:16:09,288 - INFO - Browser Setup Started: chrome
+2026-02-21 18:16:09,289 - INFO - ====== WebDriver manager ======
+2026-02-21 18:16:10,584 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:16:10,914 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:16:11,145 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:16:24,526 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========
+2026-02-21 18:16:24,526 - INFO - Navigating to Shop page
+2026-02-21 18:16:26,779 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-21 18:16:26,786 - INFO - Searching for product: Selenium Ruby
+2026-02-21 18:16:28,945 - INFO - Search submitted successfully
+2026-02-21 18:16:28,947 - INFO - Validating search results presence
+2026-02-21 18:16:28,972 - INFO - Search results found
+2026-02-21 18:16:30,455 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========
+2026-02-21 18:16:30,457 - INFO - Browser Teardown Started
+2026-02-21 18:16:32,747 - INFO - Browser Closed Successfully
+
+2026-02-21 18:16:32,748 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-21 18:16:32,749 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-21 18:16:32,750 - INFO - Browser Setup Started: chrome
+2026-02-21 18:16:32,751 - INFO - ====== WebDriver manager ======
+2026-02-21 18:16:33,705 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:16:33,892 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:16:34,074 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:16:39,923 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========
+2026-02-21 18:16:39,923 - INFO - Navigating to Shop page
+2026-02-21 18:16:42,339 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-21 18:16:42,343 - INFO - Searching for product: Robot
+2026-02-21 18:16:42,470 - INFO - Search submitted successfully
+2026-02-21 18:16:42,472 - INFO - Validating search results presence
+2026-02-21 18:16:53,765 - INFO - No products found - Negative case handled
+2026-02-21 18:16:53,766 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========
+2026-02-21 18:16:53,767 - INFO - Browser Teardown Started
+2026-02-21 18:16:56,078 - INFO - Browser Closed Successfully
+
+2026-02-21 18:16:56,080 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-21 18:16:56,083 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-21 18:16:56,083 - INFO - Total Tests Collected: 2

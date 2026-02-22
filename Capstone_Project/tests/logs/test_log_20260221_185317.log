@@ -1,0 +1,61 @@
+2026-02-21 18:53:17,804 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-21 18:53:18,220 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-21 18:53:18,229 - INFO - Total test data rows loaded: 2
+2026-02-21 18:53:18,231 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-21 18:53:18,235 - INFO - Browser Setup Started: chrome
+2026-02-21 18:53:18,235 - INFO - ====== WebDriver manager ======
+2026-02-21 18:53:19,310 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:53:19,713 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:53:20,843 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:53:30,241 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-21 18:53:30,241 - INFO - Opening My Account page
+2026-02-21 18:53:31,641 - INFO - Entering email: Rani12@gmail.com
+2026-02-21 18:53:31,932 - INFO - Entering password
+2026-02-21 18:53:32,058 - INFO - Clicking checkbox
+2026-02-21 18:53:32,188 - INFO - Clicking login button
+2026-02-21 18:53:33,812 - INFO - Validating logged in username
+2026-02-21 18:53:33,852 - INFO - Valid login successful
+2026-02-21 18:53:33,852 - INFO - ========== LOGIN TEST PASSED ==========
+2026-02-21 18:53:33,854 - INFO - Browser Teardown Started
+2026-02-21 18:53:36,126 - INFO - Browser Closed Successfully
+
+2026-02-21 18:53:36,129 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-21 18:53:36,130 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-21 18:53:36,136 - INFO - Browser Setup Started: chrome
+2026-02-21 18:53:36,138 - INFO - ====== WebDriver manager ======
+2026-02-21 18:53:37,098 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:53:37,259 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:53:37,417 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:53:43,226 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-21 18:53:43,227 - INFO - Opening My Account page
+2026-02-21 18:53:45,062 - INFO - Entering email: Rani13@gmail.com
+2026-02-21 18:53:45,252 - INFO - Entering password
+2026-02-21 18:53:45,453 - INFO - Clicking checkbox
+2026-02-21 18:53:45,578 - INFO - Clicking login button
+2026-02-21 18:53:47,324 - INFO - Validating logged in username
+2026-02-21 18:53:57,392 - INFO - Invalid login handled correctly
+2026-02-21 18:53:57,392 - INFO - ========== LOGIN TEST PASSED ==========
+2026-02-21 18:53:57,394 - INFO - Browser Teardown Started
+2026-02-21 18:53:59,699 - INFO - Browser Closed Successfully
+
+2026-02-21 18:53:59,701 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-21 18:53:59,702 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-21 18:53:59,704 - INFO - Browser Setup Started: chrome
+2026-02-21 18:53:59,705 - INFO - ====== WebDriver manager ======
+2026-02-21 18:54:00,651 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:54:00,805 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:54:00,971 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:54:07,008 - INFO - ========== STARTING LOGOUT TEST ==========
+2026-02-21 18:54:07,008 - INFO - Opening My Account page
+2026-02-21 18:54:08,512 - INFO - Performing login before logout
+2026-02-21 18:54:10,386 - INFO - Clicking sign out
+2026-02-21 18:54:12,000 - INFO - ========== LOGOUT TEST PASSED ==========
+2026-02-21 18:54:12,002 - INFO - Browser Teardown Started
+2026-02-21 18:54:14,278 - INFO - Browser Closed Successfully
+
+2026-02-21 18:54:14,280 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-21 18:54:14,284 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-21 18:54:14,284 - INFO - Total Tests Collected: 3

@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-
+from selenium.common.exceptions import TimeoutException
 
 class RegistrationPage:
 
@@ -22,6 +22,7 @@ class RegistrationPage:
 
     register = (By.NAME, "register")
     logout_link = (By.LINK_TEXT, "Sign out")
+
 
     # ----------- METHODS ------------
 
@@ -58,7 +59,18 @@ class RegistrationPage:
         ).is_displayed()
 
     def is_registration_successful(self):
-        return self.wait.until(
-            EC.visibility_of_element_located(self.logout_link)
-        ).is_displayed()
 
+        try:
+            self.wait.until(
+                EC.visibility_of_element_located(self.logout_link)
+            )
+            return True
+
+        except TimeoutException:
+            return False
+
+    def get_registration_error(self):
+        elements = self.driver.find_elements(*self.error_message)
+        if elements:
+            return elements[0].text
+        return None

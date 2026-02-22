@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">reports_2026-02-21.html</title>
+      <style type="text/css">body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+#environment ul {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+.col-links__extra {
+  margin-right: 3px;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.logwrapper {
+  max-height: 230px;
+  overflow-y: scroll;
+  background-color: #e6e6e6;
+}
+.logwrapper.expanded {
+  max-height: none;
+}
+.logwrapper.expanded .logexpander:after {
+  content: "collapse [-]";
+}
+.logwrapper .logexpander {
+  z-index: 1;
+  position: sticky;
+  top: 10px;
+  width: max-content;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin: 10px 0 10px calc(100% - 80px);
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+.logwrapper .logexpander:after {
+  content: "expand [+]";
+}
+.logwrapper .logexpander:hover {
+  color: #000;
+  border-color: #000;
+}
+.logwrapper .log {
+  min-height: 40px;
+  position: relative;
+  top: -50px;
+  height: calc(100% + 50px);
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  padding-right: 80px;
+  white-space: pre-wrap;
+}
+
+div.media {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin: 0 5px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  align-items: center;
+  flex: 1 1;
+  overflow: hidden;
+  height: 200px;
+}
+
+.media-container--fullscreen {
+  grid-template-columns: 0px auto 0px;
+}
+
+.media-container__nav--right,
+.media-container__nav--left {
+  text-align: center;
+  cursor: pointer;
+}
+
+.media-container__viewport {
+  cursor: pointer;
+  text-align: center;
+  height: inherit;
+}
+.media-container__viewport img,
+.media-container__viewport video {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.media__name,
+.media__counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0 0 25px;
+  align-items: center;
+}
+
+.collapsible td:not(.col-links) {
+  cursor: pointer;
+}
+.collapsible td:not(.col-links):hover::after {
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.col-result {
+  width: 130px;
+}
+.col-result:hover::after {
+  content: " (hide details)";
+}
+
+.col-result.collapsed:hover::after {
+  content: " (show details)";
+}
+
+#environment-header h2:hover::after {
+  content: " (hide details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#environment-header.collapsed h2:hover::after {
+  content: " (show details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+.sortable.desc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: -12.5px;
+  border: 10px solid #4caf50;
+  border-bottom: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.sortable.asc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: 12.5px;
+  border: 10px solid #4caf50;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.hidden, .summary__reload__button.hidden {
+  display: none;
+}
+
+.summary__data {
+  flex: 0 0 550px;
+}
+.summary__reload {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+}
+.summary__reload__button {
+  flex: 0 0 300px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  background-color: #4caf50;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.summary__reload__button:hover {
+  background-color: #46a049;
+}
+.summary__spacer {
+  flex: 0 0 550px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters,
+.collapse {
+  display: flex;
+  align-items: center;
+}
+.filters button,
+.collapse button {
+  color: #999;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.filters button:hover,
+.collapse button:hover {
+  color: #ccc;
+}
+
+.filter__label {
+  margin-right: 10px;
+}
+
+      </style>
+    
+  </head>
+  <body>
+    <h1 id="title">reports_2026-02-21.html</h1>
+    <p>Report generated on 21-Feb-2026 at 21:25:37 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.2.0</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</td>
+        </tr>
+      </tbody>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left">&lt;</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">&gt;</div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">22 tests took 00:06:14.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" >
+            <span class="failed">1 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" >
+            <span class="passed">21 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled>
+            <span class="rerun">0 Reruns</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="retried" disabled>
+            <span class="retried">0 Retried,</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.13.0&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26100-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;9.0.2&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;anyio&#34;: &#34;4.6.2.post1&#34;, &#34;html&#34;: &#34;4.2.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;order&#34;: &#34;1.3.0&#34;, &#34;xdist&#34;: &#34;3.8.0&#34;}}, &#34;tests&#34;: {&#34;tests/test_registration.py::test_user_registration[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_registration.py::test_user_registration[data0]&#34;, &#34;duration&#34;: &#34;00:00:24&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_registration.py::test_user_registration[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:24&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;Operation Failed Due To User Already Exists\n\n---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:19:23,677 - INFO - ------ Test Started: test_user_registration[data0] ------\n2026-02-21 21:19:23,679 - INFO - Browser Setup Started: chrome\n2026-02-21 21:19:23,679 - INFO - ====== WebDriver manager ======\n2026-02-21 21:19:24,661 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:19:24,833 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:19:24,988 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:19:31,540 - INFO - ========== STARTING USER REGISTRATION TEST ==========\n2026-02-21 21:19:31,541 - INFO - Clicking on Sign Up / My Account link\n2026-02-21 21:19:32,909 - INFO - Verifying registration page is loaded\n2026-02-21 21:19:32,971 - INFO - Entering email: Neeraja43@gmail.com\n2026-02-21 21:19:33,268 - INFO - Entering password\n2026-02-21 21:19:33,490 - INFO - Clicking Register button\n2026-02-21 21:19:34,872 - INFO - Validating registration result\n2026-02-21 21:19:34,872 - INFO - Validating successful registration (Logout link visible)\n2026-02-21 21:19:44,984 - INFO - Operation Failed Due To User Already Exists\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_registration.py:37 ========== STARTING USER REGISTRATION TEST ==========\nINFO     root:test_registration.py:42 Clicking on Sign Up / My Account link\nINFO     root:test_registration.py:44 Verifying registration page is loaded\nINFO     root:test_registration.py:47 Entering email: Neeraja43@gmail.com\nINFO     root:test_registration.py:51 Entering password\nINFO     root:test_registration.py:58 Clicking Register button\nINFO     root:test_registration.py:63 Validating registration result\nINFO     root:test_registration.py:65 Validating successful registration (Logout link visible)\nINFO     root:test_registration.py:69 Operation Failed Due To User Already Exists\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:19:45,098 - ERROR - Test Failed: test_user_registration[data0]\n2026-02-21 21:19:45,099 - ERROR - Screenshot saved at: C:\\Users\\Neeraja\\Desktop\\Wipro_Practice\\Capstone_Project\\tests\\screenshots\\test_user_registration[data0]_20260221_211944.png\n2026-02-21 21:19:45,100 - INFO - Browser Teardown Started\n2026-02-21 21:19:47,462 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_login_page.py::test_login[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login_page.py::test_login[data0]&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login_page.py::test_login[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:19:47,464 - INFO - ------ Test Finished: test_user_registration[data0] ------\n\n2026-02-21 21:19:47,465 - INFO - ------ Test Started: test_login[data0] ------\n2026-02-21 21:19:47,467 - INFO - Browser Setup Started: chrome\n2026-02-21 21:19:47,467 - INFO - ====== WebDriver manager ======\n2026-02-21 21:19:48,403 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:19:48,563 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:19:48,797 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:19:56,049 - INFO - ========== STARTING LOGIN TEST ==========\n2026-02-21 21:19:56,050 - INFO - Opening My Account page\n2026-02-21 21:19:57,951 - INFO - Entering email: Rani12@gmail.com\n2026-02-21 21:19:58,189 - INFO - Entering password\n2026-02-21 21:19:58,395 - INFO - Clicking checkbox\n2026-02-21 21:19:58,517 - INFO - Clicking login button\n2026-02-21 21:19:58,618 - INFO - Validating logged in username\n2026-02-21 21:20:00,466 - INFO - Valid login successful\n2026-02-21 21:20:00,466 - INFO - ========== LOGIN TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_login_page.py:35 ========== STARTING LOGIN TEST ==========\nINFO     root:test_login_page.py:38 Opening My Account page\nINFO     root:test_login_page.py:42 Entering email: Rani12@gmail.com\nINFO     root:test_login_page.py:46 Entering password\nINFO     root:test_login_page.py:50 Clicking checkbox\nINFO     root:test_login_page.py:54 Clicking login button\nINFO     root:test_login_page.py:56 Validating logged in username\nINFO     root:test_login_page.py:61 Valid login successful\nINFO     root:test_login_page.py:66 ========== LOGIN TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:20:00,467 - INFO - Browser Teardown Started\n2026-02-21 21:20:02,714 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_login_page.py::test_login[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login_page.py::test_login[data1]&#34;, &#34;duration&#34;: &#34;00:00:25&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login_page.py::test_login[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:25&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:20:02,716 - INFO - ------ Test Finished: test_login[data0] ------\n\n2026-02-21 21:20:02,717 - INFO - ------ Test Started: test_login[data1] ------\n2026-02-21 21:20:02,719 - INFO - Browser Setup Started: chrome\n2026-02-21 21:20:02,719 - INFO - ====== WebDriver manager ======\n2026-02-21 21:20:03,662 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:03,842 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:04,086 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:20:11,596 - INFO - ========== STARTING LOGIN TEST ==========\n2026-02-21 21:20:11,597 - INFO - Opening My Account page\n2026-02-21 21:20:13,474 - INFO - Entering email: Rani16@gmail.com\n2026-02-21 21:20:13,655 - INFO - Entering password\n2026-02-21 21:20:13,772 - INFO - Clicking checkbox\n2026-02-21 21:20:13,901 - INFO - Clicking login button\n2026-02-21 21:20:15,744 - INFO - Validating logged in username\n2026-02-21 21:20:25,791 - INFO - Invalid login handled correctly\n2026-02-21 21:20:25,791 - INFO - ========== LOGIN TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_login_page.py:35 ========== STARTING LOGIN TEST ==========\nINFO     root:test_login_page.py:38 Opening My Account page\nINFO     root:test_login_page.py:42 Entering email: Rani16@gmail.com\nINFO     root:test_login_page.py:46 Entering password\nINFO     root:test_login_page.py:50 Clicking checkbox\nINFO     root:test_login_page.py:54 Clicking login button\nINFO     root:test_login_page.py:56 Validating logged in username\nINFO     root:test_login_page.py:63 Invalid login handled correctly\nINFO     root:test_login_page.py:66 ========== LOGIN TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:20:25,793 - INFO - Browser Teardown Started\n2026-02-21 21:20:28,205 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_search_product.py::test_search_product[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_search_product.py::test_search_product[data0]&#34;, &#34;duration&#34;: &#34;00:00:14&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_search_product.py::test_search_product[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:14&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:20:28,209 - INFO - ------ Test Finished: test_login[data1] ------\n\n2026-02-21 21:20:28,210 - INFO - ------ Test Started: test_search_product[data0] ------\n2026-02-21 21:20:28,216 - INFO - Browser Setup Started: chrome\n2026-02-21 21:20:28,218 - INFO - ====== WebDriver manager ======\n2026-02-21 21:20:29,182 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:29,361 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:29,528 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:20:33,881 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========\n2026-02-21 21:20:33,881 - INFO - Navigating to Shop page\n2026-02-21 21:20:35,496 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:20:35,500 - INFO - Searching for product: Selenium Ruby\n2026-02-21 21:20:37,577 - INFO - Search submitted successfully\n2026-02-21 21:20:37,599 - INFO - Validating search results presence\n2026-02-21 21:20:37,619 - INFO - Search results found\n2026-02-21 21:20:39,518 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_search_product.py:36 ========== STARTING SEARCH PRODUCT TEST ==========\nINFO     root:test_search_product.py:42 Navigating to Shop page\nINFO     root:test_search_product.py:45 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_search_product.py:52 Searching for product: Selenium Ruby\nINFO     root:test_search_product.py:56 Search submitted successfully\nINFO     root:test_search_product.py:70 Validating search results presence\nINFO     root:test_search_product.py:80 Search results found\nINFO     root:test_search_product.py:129 ========== SEARCH PRODUCT TEST COMPLETED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:20:39,520 - INFO - Browser Teardown Started\n2026-02-21 21:20:41,779 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_search_product.py::test_search_product[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_search_product.py::test_search_product[data1]&#34;, &#34;duration&#34;: &#34;00:00:23&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_search_product.py::test_search_product[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:23&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:20:41,780 - INFO - ------ Test Finished: test_search_product[data0] ------\n\n2026-02-21 21:20:41,780 - INFO - ------ Test Started: test_search_product[data1] ------\n2026-02-21 21:20:41,781 - INFO - Browser Setup Started: chrome\n2026-02-21 21:20:41,782 - INFO - ====== WebDriver manager ======\n2026-02-21 21:20:42,811 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:42,990 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:20:43,276 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:20:49,214 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========\n2026-02-21 21:20:49,215 - INFO - Navigating to Shop page\n2026-02-21 21:20:50,473 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:20:50,478 - INFO - Searching for product: Robot\n2026-02-21 21:20:52,571 - INFO - Search submitted successfully\n2026-02-21 21:20:52,613 - INFO - Validating search results presence\n2026-02-21 21:21:02,686 - INFO - No products found - Validating negative scenario\n2026-02-21 21:21:02,717 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_search_product.py:36 ========== STARTING SEARCH PRODUCT TEST ==========\nINFO     root:test_search_product.py:42 Navigating to Shop page\nINFO     root:test_search_product.py:45 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_search_product.py:52 Searching for product: Robot\nINFO     root:test_search_product.py:56 Search submitted successfully\nINFO     root:test_search_product.py:70 Validating search results presence\nINFO     root:test_search_product.py:113 No products found - Validating negative scenario\nINFO     root:test_search_product.py:129 ========== SEARCH PRODUCT TEST COMPLETED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:21:02,719 - INFO - Browser Teardown Started\n2026-02-21 21:21:05,017 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_addproduct_page.py::test_add_product_to_cart&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_addproduct_page.py::test_add_product_to_cart&#34;, &#34;duration&#34;: &#34;00:00:14&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_addproduct_page.py::test_add_product_to_cart&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:14&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:21:05,018 - INFO - ------ Test Finished: test_search_product[data1] ------\n\n2026-02-21 21:21:05,019 - INFO - ------ Test Started: test_add_product_to_cart ------\n2026-02-21 21:21:05,021 - INFO - Browser Setup Started: chrome\n2026-02-21 21:21:05,021 - INFO - ====== WebDriver manager ======\n2026-02-21 21:21:05,994 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:06,171 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:06,328 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:21:12,893 - INFO - ========== STARTING ADD PRODUCT TO CART TEST ==========\n2026-02-21 21:21:12,894 - INFO - Navigating to Shop page\n2026-02-21 21:21:14,799 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:21:14,799 - INFO - Adding product to basket\n2026-02-21 21:21:14,853 - INFO - Validating product added to basket (View Basket visible)\n2026-02-21 21:21:14,871 - INFO - View basket button clicked\n2026-02-21 21:21:16,283 - INFO - Validating basket page URL\n2026-02-21 21:21:16,310 - INFO - Validating page title\n2026-02-21 21:21:16,316 - INFO - Page title: Basket \u2013 Automation Practice Site\n2026-02-21 21:21:16,321 - INFO - ========== ADD PRODUCT TO CART TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_addproduct_page.py:8 ========== STARTING ADD PRODUCT TO CART TEST ==========\nINFO     root:test_addproduct_page.py:13 Navigating to Shop page\nINFO     root:test_addproduct_page.py:21 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_addproduct_page.py:22 Adding product to basket\nINFO     root:test_addproduct_page.py:24 Validating product added to basket (View Basket visible)\nINFO     root:test_addproduct_page.py:27 View basket button clicked\nINFO     root:test_addproduct_page.py:32 Validating basket page URL\nINFO     root:test_addproduct_page.py:34 Validating page title\nINFO     root:test_addproduct_page.py:35 Page title: Basket \u2013 Automation Practice Site\nINFO     root:test_addproduct_page.py:37 ========== ADD PRODUCT TO CART TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:21:16,323 - INFO - Browser Teardown Started\n2026-02-21 21:21:18,569 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_remove_product.py::test_remove_product&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_remove_product.py::test_remove_product&#34;, &#34;duration&#34;: &#34;00:00:32&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_remove_product.py::test_remove_product&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:32&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:21:18,570 - INFO - ------ Test Finished: test_add_product_to_cart ------\n\n2026-02-21 21:21:18,570 - INFO - ------ Test Started: test_remove_product ------\n2026-02-21 21:21:18,571 - INFO - Browser Setup Started: chrome\n2026-02-21 21:21:18,572 - INFO - ====== WebDriver manager ======\n2026-02-21 21:21:19,531 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:19,684 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:19,841 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:21:23,071 - INFO - ========== STARTING REMOVE PRODUCT TEST ==========\n2026-02-21 21:21:23,071 - INFO - Navigating to Shop page\n2026-02-21 21:21:25,267 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:21:25,274 - INFO - Adding product to basket\n2026-02-21 21:21:25,381 - INFO - Validating View Basket button visibility\n2026-02-21 21:21:25,701 - INFO - Clicking View Basket button\n2026-02-21 21:21:27,502 - INFO - Current URL after clicking View Basket: https://practice.automationtesting.in/basket/\n2026-02-21 21:21:27,507 - INFO - Removing product from cart\n2026-02-21 21:21:38,300 - INFO - Remaining remove buttons count: 0\n2026-02-21 21:21:48,335 - INFO - Final URL after removal: https://practice.automationtesting.in/basket/\n2026-02-21 21:21:48,335 - INFO - ========== REMOVE PRODUCT TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_remove_product.py:8 ========== STARTING REMOVE PRODUCT TEST ==========\nINFO     root:test_remove_product.py:13 Navigating to Shop page\nINFO     root:test_remove_product.py:16 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_remove_product.py:21 Adding product to basket\nINFO     root:test_remove_product.py:23 Validating View Basket button visibility\nINFO     root:test_remove_product.py:26 Clicking View Basket button\nINFO     root:test_remove_product.py:28 Current URL after clicking View Basket: https://practice.automationtesting.in/basket/\nINFO     root:test_remove_product.py:32 Removing product from cart\nINFO     root:test_remove_product.py:35 Remaining remove buttons count: 0\nINFO     root:test_remove_product.py:41 Final URL after removal: https://practice.automationtesting.in/basket/\nINFO     root:test_remove_product.py:42 ========== REMOVE PRODUCT TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:21:48,337 - INFO - Browser Teardown Started\n2026-02-21 21:21:50,631 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_order_product.py::test_place_order_cod[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_order_product.py::test_place_order_cod[data0]&#34;, &#34;duration&#34;: &#34;00:00:22&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_order_product.py::test_place_order_cod[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:22&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:21:50,634 - INFO - ------ Test Finished: test_remove_product ------\n\n2026-02-21 21:21:50,634 - INFO - ------ Test Started: test_place_order_cod[data0] ------\n2026-02-21 21:21:50,636 - INFO - Browser Setup Started: chrome\n2026-02-21 21:21:50,636 - INFO - ====== WebDriver manager ======\n2026-02-21 21:21:51,575 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:51,730 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:21:51,887 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:21:59,503 - INFO - ========== PLACE ORDER LOGIN TEST ==========\n2026-02-21 21:21:59,503 - INFO - Navigating to Shop page\n2026-02-21 21:22:01,386 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:22:01,387 - INFO - Adding product to basket\n2026-02-21 21:22:01,444 - INFO - Viewing basket\n2026-02-21 21:22:03,682 - INFO - Proceeding to checkout\n2026-02-21 21:22:05,547 - INFO - Filling billing details\n2026-02-21 21:22:06,353 - INFO - Selecting country: IN\n2026-02-21 21:22:06,365 - INFO - Entering address details\n2026-02-21 21:22:07,174 - INFO - Entering order notes\n2026-02-21 21:22:07,419 - INFO - Selecting payment method: cod\n2026-02-21 21:22:07,458 - INFO - Clicking Place Order button\n2026-02-21 21:22:09,851 - INFO - Verifying order success message\n2026-02-21 21:22:09,851 - INFO - Waiting for success message\n2026-02-21 21:22:09,886 - INFO - Success Message Received: Thank you. Your order has been received.\n2026-02-21 21:22:09,886 - INFO - ========== PLACE ORDER TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_order_product.py:41 ========== PLACE ORDER LOGIN TEST ==========\nINFO     root:test_order_product.py:46 Navigating to Shop page\nINFO     root:test_order_product.py:49 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_order_product.py:52 Adding product to basket\nINFO     root:test_order_product.py:56 Viewing basket\nINFO     root:test_order_product.py:60 Proceeding to checkout\nINFO     root:test_order_product.py:64 Filling billing details\nINFO     root:test_order_product.py:72 Selecting country: IN\nINFO     root:test_order_product.py:76 Entering address details\nINFO     root:test_order_product.py:83 Entering order notes\nINFO     root:test_order_product.py:87 Selecting payment method: cod\nINFO     root:test_order_product.py:91 Clicking Place Order button\nINFO     root:test_order_product.py:95 Verifying order success message\nINFO     root:Order_product.py:181 Waiting for success message\nINFO     root:test_order_product.py:98 Success Message Received: Thank you. Your order has been received.\nINFO     root:test_order_product.py:103 ========== PLACE ORDER TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:22:09,888 - INFO - Browser Teardown Started\n2026-02-21 21:22:12,183 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_order_product.py::test_place_order_cod[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_order_product.py::test_place_order_cod[data1]&#34;, &#34;duration&#34;: &#34;00:00:22&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_order_product.py::test_place_order_cod[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:22&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:22:12,186 - INFO - ------ Test Finished: test_place_order_cod[data0] ------\n\n2026-02-21 21:22:12,187 - INFO - ------ Test Started: test_place_order_cod[data1] ------\n2026-02-21 21:22:12,189 - INFO - Browser Setup Started: chrome\n2026-02-21 21:22:12,189 - INFO - ====== WebDriver manager ======\n2026-02-21 21:22:13,182 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:13,345 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:13,549 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:22:22,930 - INFO - ========== PLACE ORDER LOGIN TEST ==========\n2026-02-21 21:22:22,930 - INFO - Navigating to Shop page\n2026-02-21 21:22:24,860 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:22:24,860 - INFO - Adding product to basket\n2026-02-21 21:22:24,913 - INFO - Viewing basket\n2026-02-21 21:22:26,615 - INFO - Proceeding to checkout\n2026-02-21 21:22:28,644 - INFO - Filling billing details\n2026-02-21 21:22:29,424 - INFO - Selecting country: IN\n2026-02-21 21:22:29,437 - INFO - Entering address details\n2026-02-21 21:22:30,181 - INFO - Entering order notes\n2026-02-21 21:22:30,362 - INFO - Selecting payment method: bacs\n2026-02-21 21:22:30,412 - INFO - Clicking Place Order button\n2026-02-21 21:22:32,332 - INFO - Verifying order success message\n2026-02-21 21:22:32,332 - INFO - Waiting for success message\n2026-02-21 21:22:32,366 - INFO - Success Message Received: Thank you. Your order has been received.\n2026-02-21 21:22:32,366 - INFO - ========== PLACE ORDER TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_order_product.py:41 ========== PLACE ORDER LOGIN TEST ==========\nINFO     root:test_order_product.py:46 Navigating to Shop page\nINFO     root:test_order_product.py:49 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_order_product.py:52 Adding product to basket\nINFO     root:test_order_product.py:56 Viewing basket\nINFO     root:test_order_product.py:60 Proceeding to checkout\nINFO     root:test_order_product.py:64 Filling billing details\nINFO     root:test_order_product.py:72 Selecting country: IN\nINFO     root:test_order_product.py:76 Entering address details\nINFO     root:test_order_product.py:83 Entering order notes\nINFO     root:test_order_product.py:87 Selecting payment method: bacs\nINFO     root:test_order_product.py:91 Clicking Place Order button\nINFO     root:test_order_product.py:95 Verifying order success message\nINFO     root:Order_product.py:181 Waiting for success message\nINFO     root:test_order_product.py:98 Success Message Received: Thank you. Your order has been received.\nINFO     root:test_order_product.py:103 ========== PLACE ORDER TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:22:32,368 - INFO - Browser Teardown Started\n2026-02-21 21:22:34,649 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data0]&#34;, &#34;duration&#34;: &#34;00:00:10&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:10&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:22:34,652 - INFO - ------ Test Finished: test_place_order_cod[data1] ------\n\n2026-02-21 21:22:34,652 - INFO - ------ Test Started: test_sort_products[data0] ------\n2026-02-21 21:22:34,654 - INFO - Browser Setup Started: chrome\n2026-02-21 21:22:34,655 - INFO - ====== WebDriver manager ======\n2026-02-21 21:22:35,618 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:35,769 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:35,920 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:22:41,327 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:22:41,327 - INFO - Navigating to Shop page\n2026-02-21 21:22:42,680 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:22:42,687 - INFO - Selecting sort option: menu_order\n2026-02-21 21:22:42,752 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/\n2026-02-21 21:22:42,752 - INFO - Validating default sorting (no orderby parameter expected)\n2026-02-21 21:22:42,752 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: menu_order\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:67 Validating default sorting (no orderby parameter expected)\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:22:42,753 - INFO - Browser Teardown Started\n2026-02-21 21:22:45,008 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data1]&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:22:45,012 - INFO - ------ Test Finished: test_sort_products[data0] ------\n\n2026-02-21 21:22:45,012 - INFO - ------ Test Started: test_sort_products[data1] ------\n2026-02-21 21:22:45,014 - INFO - Browser Setup Started: chrome\n2026-02-21 21:22:45,015 - INFO - ====== WebDriver manager ======\n2026-02-21 21:22:45,977 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:46,170 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:22:46,367 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:22:53,305 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:22:53,305 - INFO - Navigating to Shop page\n2026-02-21 21:22:55,229 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:22:55,234 - INFO - Selecting sort option: popularity\n2026-02-21 21:22:58,014 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=popularity\n2026-02-21 21:22:58,014 - INFO - Validating URL contains parameter: orderby=popularity\n2026-02-21 21:22:58,015 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: popularity\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=popularity\nINFO     root:test_sort_product.py:72 Validating URL contains parameter: orderby=popularity\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:22:58,016 - INFO - Browser Teardown Started\n2026-02-21 21:23:00,250 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data2]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data2]&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data2]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:23:00,253 - INFO - ------ Test Finished: test_sort_products[data1] ------\n\n2026-02-21 21:23:00,253 - INFO - ------ Test Started: test_sort_products[data2] ------\n2026-02-21 21:23:00,254 - INFO - Browser Setup Started: chrome\n2026-02-21 21:23:00,255 - INFO - ====== WebDriver manager ======\n2026-02-21 21:23:01,236 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:01,567 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:02,452 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:23:08,836 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:23:08,837 - INFO - Navigating to Shop page\n2026-02-21 21:23:11,274 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:23:11,280 - INFO - Selecting sort option: rating\n2026-02-21 21:23:12,804 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=rating\n2026-02-21 21:23:12,804 - INFO - Validating URL contains parameter: orderby=rating\n2026-02-21 21:23:12,805 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: rating\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=rating\nINFO     root:test_sort_product.py:72 Validating URL contains parameter: orderby=rating\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:23:12,806 - INFO - Browser Teardown Started\n2026-02-21 21:23:15,083 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data3]&#34;, &#34;duration&#34;: &#34;00:00:13&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:13&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:23:15,087 - INFO - ------ Test Finished: test_sort_products[data2] ------\n\n2026-02-21 21:23:15,087 - INFO - ------ Test Started: test_sort_products[data3] ------\n2026-02-21 21:23:15,089 - INFO - Browser Setup Started: chrome\n2026-02-21 21:23:15,089 - INFO - ====== WebDriver manager ======\n2026-02-21 21:23:16,047 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:16,262 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:16,601 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:23:22,983 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:23:22,983 - INFO - Navigating to Shop page\n2026-02-21 21:23:24,281 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:23:24,286 - INFO - Selecting sort option: date\n2026-02-21 21:23:25,749 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=date\n2026-02-21 21:23:25,749 - INFO - Validating URL contains parameter: orderby=date\n2026-02-21 21:23:25,750 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: date\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=date\nINFO     root:test_sort_product.py:72 Validating URL contains parameter: orderby=date\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:23:25,751 - INFO - Browser Teardown Started\n2026-02-21 21:23:28,376 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data4]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data4]&#34;, &#34;duration&#34;: &#34;00:00:14&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data4]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:14&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:23:28,377 - INFO - ------ Test Finished: test_sort_products[data3] ------\n\n2026-02-21 21:23:28,378 - INFO - ------ Test Started: test_sort_products[data4] ------\n2026-02-21 21:23:28,379 - INFO - Browser Setup Started: chrome\n2026-02-21 21:23:28,380 - INFO - ====== WebDriver manager ======\n2026-02-21 21:23:29,343 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:29,608 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:30,100 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:23:36,334 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:23:36,335 - INFO - Navigating to Shop page\n2026-02-21 21:23:38,189 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:23:38,194 - INFO - Selecting sort option: price\n2026-02-21 21:23:40,067 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price\n2026-02-21 21:23:40,067 - INFO - Validating URL contains parameter: orderby=price\n2026-02-21 21:23:40,067 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: price\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price\nINFO     root:test_sort_product.py:72 Validating URL contains parameter: orderby=price\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:23:40,068 - INFO - Browser Teardown Started\n2026-02-21 21:23:42,324 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_sort_product.py::test_sort_products[data5]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_sort_product.py::test_sort_products[data5]&#34;, &#34;duration&#34;: &#34;00:00:13&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_sort_product.py::test_sort_products[data5]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:13&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:23:42,327 - INFO - ------ Test Finished: test_sort_products[data4] ------\n\n2026-02-21 21:23:42,327 - INFO - ------ Test Started: test_sort_products[data5] ------\n2026-02-21 21:23:42,328 - INFO - Browser Setup Started: chrome\n2026-02-21 21:23:42,329 - INFO - ====== WebDriver manager ======\n2026-02-21 21:23:43,296 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:43,461 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:43,620 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:23:49,843 - INFO - ========== STARTING SORT PRODUCTS TEST ==========\n2026-02-21 21:23:49,843 - INFO - Navigating to Shop page\n2026-02-21 21:23:51,606 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:23:51,611 - INFO - Selecting sort option: price-desc\n2026-02-21 21:23:52,865 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price-desc\n2026-02-21 21:23:52,865 - INFO - Validating URL contains parameter: orderby=price-desc\n2026-02-21 21:23:52,865 - INFO - ========== SORT PRODUCTS TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_sort_product.py:36 ========== STARTING SORT PRODUCTS TEST ==========\nINFO     root:test_sort_product.py:44 Navigating to Shop page\nINFO     root:test_sort_product.py:47 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_sort_product.py:55 Selecting sort option: price-desc\nINFO     root:test_sort_product.py:62 Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price-desc\nINFO     root:test_sort_product.py:72 Validating URL contains parameter: orderby=price-desc\nINFO     root:test_sort_product.py:74 ========== SORT PRODUCTS TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:23:52,866 - INFO - Browser Teardown Started\n2026-02-21 21:23:55,147 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_findorders_byuser.py::test_findOrdersByUser[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_findorders_byuser.py::test_findOrdersByUser[data0]&#34;, &#34;duration&#34;: &#34;00:00:16&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_findorders_byuser.py::test_findOrdersByUser[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:16&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:23:55,151 - INFO - ------ Test Finished: test_sort_products[data5] ------\n\n2026-02-21 21:23:55,151 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------\n2026-02-21 21:23:55,153 - INFO - Browser Setup Started: chrome\n2026-02-21 21:23:55,153 - INFO - ====== WebDriver manager ======\n2026-02-21 21:23:56,488 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:56,646 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:23:56,802 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:24:02,574 - INFO - ========== STARTING FILTER ORDERS BY USER TEST ==========\n2026-02-21 21:24:02,574 - INFO - Clicking on Login/My Account link\n2026-02-21 21:24:03,936 - INFO - Current URL after clicking login: https://practice.automationtesting.in/my-account/\n2026-02-21 21:24:03,942 - INFO - Entering Email: Rani12@gmail.com\n2026-02-21 21:24:04,123 - INFO - Email entered in field: Rani12@gmail.com\n2026-02-21 21:24:04,123 - INFO - Entering Password\n2026-02-21 21:24:04,400 - INFO - Password entered successfully\n2026-02-21 21:24:04,400 - INFO - Selecting Remember Me checkbox\n2026-02-21 21:24:04,580 - INFO - Checkbox selected status: True\n2026-02-21 21:24:04,580 - INFO - Clicking Login button\n2026-02-21 21:24:06,622 - INFO - URL after login: https://practice.automationtesting.in/my-account/\n2026-02-21 21:24:06,627 - INFO - Checking if Orders table is displayed\n2026-02-21 21:24:06,628 - INFO - Checking if Orders table is displayed\n2026-02-21 21:24:08,607 - INFO - Orders table is visible\n2026-02-21 21:24:08,608 - INFO - ========== FILTER ORDERS BY USER TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_findorders_byuser.py:37 ========== STARTING FILTER ORDERS BY USER TEST ==========\nINFO     root:test_findorders_byuser.py:42 Clicking on Login/My Account link\nINFO     root:test_findorders_byuser.py:45 Current URL after clicking login: https://practice.automationtesting.in/my-account/\nINFO     root:test_findorders_byuser.py:50 Entering Email: Rani12@gmail.com\nINFO     root:test_findorders_byuser.py:53 Email entered in field: Rani12@gmail.com\nINFO     root:test_findorders_byuser.py:57 Entering Password\nINFO     root:test_findorders_byuser.py:60 Password entered successfully\nINFO     root:test_findorders_byuser.py:63 Selecting Remember Me checkbox\nINFO     root:test_findorders_byuser.py:66 Checkbox selected status: True\nINFO     root:test_findorders_byuser.py:68 Clicking Login button\nINFO     root:test_findorders_byuser.py:71 URL after login: https://practice.automationtesting.in/my-account/\nINFO     root:test_findorders_byuser.py:75 Checking if Orders table is displayed\nINFO     root:test_findorders_byuser.py:78 Checking if Orders table is displayed\nINFO     root:test_findorders_byuser.py:81 Orders table is visible\nINFO     root:test_findorders_byuser.py:85 ========== FILTER ORDERS BY USER TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:24:08,609 - INFO - Browser Teardown Started\n2026-02-21 21:24:10,880 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_findorders_byuser.py::test_findOrdersByUser[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_findorders_byuser.py::test_findOrdersByUser[data1]&#34;, &#34;duration&#34;: &#34;00:00:25&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_findorders_byuser.py::test_findOrdersByUser[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:25&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:24:10,884 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------\n\n2026-02-21 21:24:10,885 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------\n2026-02-21 21:24:10,891 - INFO - Browser Setup Started: chrome\n2026-02-21 21:24:10,893 - INFO - ====== WebDriver manager ======\n2026-02-21 21:24:12,390 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:12,561 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:12,790 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:24:17,994 - INFO - ========== STARTING FILTER ORDERS BY USER TEST ==========\n2026-02-21 21:24:17,994 - INFO - Clicking on Login/My Account link\n2026-02-21 21:24:19,532 - INFO - Current URL after clicking login: https://practice.automationtesting.in/my-account/\n2026-02-21 21:24:19,538 - INFO - Entering Email: Rani13@gmail.com\n2026-02-21 21:24:19,802 - INFO - Email entered in field: Rani13@gmail.com\n2026-02-21 21:24:19,802 - INFO - Entering Password\n2026-02-21 21:24:19,922 - INFO - Password entered successfully\n2026-02-21 21:24:19,923 - INFO - Selecting Remember Me checkbox\n2026-02-21 21:24:20,091 - INFO - Checkbox selected status: True\n2026-02-21 21:24:20,091 - INFO - Clicking Login button\n2026-02-21 21:24:21,753 - INFO - URL after login: https://practice.automationtesting.in/my-account/\n2026-02-21 21:24:21,758 - INFO - Checking if Orders table is displayed\n2026-02-21 21:24:21,759 - INFO - Checking if Orders table is displayed\n2026-02-21 21:24:33,934 - INFO - No orders / Invalid login - Negative case handled\n2026-02-21 21:24:33,935 - INFO - ========== FILTER ORDERS BY USER TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_findorders_byuser.py:37 ========== STARTING FILTER ORDERS BY USER TEST ==========\nINFO     root:test_findorders_byuser.py:42 Clicking on Login/My Account link\nINFO     root:test_findorders_byuser.py:45 Current URL after clicking login: https://practice.automationtesting.in/my-account/\nINFO     root:test_findorders_byuser.py:50 Entering Email: Rani13@gmail.com\nINFO     root:test_findorders_byuser.py:53 Email entered in field: Rani13@gmail.com\nINFO     root:test_findorders_byuser.py:57 Entering Password\nINFO     root:test_findorders_byuser.py:60 Password entered successfully\nINFO     root:test_findorders_byuser.py:63 Selecting Remember Me checkbox\nINFO     root:test_findorders_byuser.py:66 Checkbox selected status: True\nINFO     root:test_findorders_byuser.py:68 Clicking Login button\nINFO     root:test_findorders_byuser.py:71 URL after login: https://practice.automationtesting.in/my-account/\nINFO     root:test_findorders_byuser.py:75 Checking if Orders table is displayed\nINFO     root:test_findorders_byuser.py:78 Checking if Orders table is displayed\nINFO     root:test_findorders_byuser.py:83 No orders / Invalid login - Negative case handled\nINFO     root:test_findorders_byuser.py:85 ========== FILTER ORDERS BY USER TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:24:33,938 - INFO - Browser Teardown Started\n2026-02-21 21:24:36,267 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_filterproduct_byprice.py::test_filter_product[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_filterproduct_byprice.py::test_filter_product[data0]&#34;, &#34;duration&#34;: &#34;00:00:12&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_filterproduct_byprice.py::test_filter_product[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:12&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:24:36,268 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------\n\n2026-02-21 21:24:36,269 - INFO - ------ Test Started: test_filter_product[data0] ------\n2026-02-21 21:24:36,270 - INFO - Browser Setup Started: chrome\n2026-02-21 21:24:36,270 - INFO - ====== WebDriver manager ======\n2026-02-21 21:24:37,235 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:37,468 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:37,805 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:24:42,853 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\n2026-02-21 21:24:42,853 - INFO - Navigating to Shop page\n2026-02-21 21:24:44,092 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:24:44,097 - INFO - Applying price filter -&amp;gt; Min: 150.0, Max: 300.0\n2026-02-21 21:24:45,906 - INFO - Price filter applied successfully\n2026-02-21 21:24:45,920 - INFO - Number of products displayed after filtering: 4\n2026-02-21 21:24:45,926 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=150.0&amp;amp;max_price=300.0\n2026-02-21 21:24:45,932 - INFO - ========== FILTER PRODUCT TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_filterproduct_byprice.py:38 ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\nINFO     root:test_filterproduct_byprice.py:42 Navigating to Shop page\nINFO     root:test_filterproduct_byprice.py:45 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_filterproduct_byprice.py:53 Applying price filter -&amp;gt; Min: 150.0, Max: 300.0\nINFO     root:test_filterproduct_byprice.py:55 Price filter applied successfully\nINFO     root:test_filterproduct_byprice.py:60 Number of products displayed after filtering: 4\nINFO     root:test_filterproduct_byprice.py:69 URL after filtering: https://practice.automationtesting.in/shop/?min_price=150.0&amp;amp;max_price=300.0\nINFO     root:test_filterproduct_byprice.py:73 ========== FILTER PRODUCT TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:24:45,933 - INFO - Browser Teardown Started\n2026-02-21 21:24:48,189 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_filterproduct_byprice.py::test_filter_product[data1]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_filterproduct_byprice.py::test_filter_product[data1]&#34;, &#34;duration&#34;: &#34;00:00:12&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_filterproduct_byprice.py::test_filter_product[data1]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:12&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:24:48,192 - INFO - ------ Test Finished: test_filter_product[data0] ------\n\n2026-02-21 21:24:48,193 - INFO - ------ Test Started: test_filter_product[data1] ------\n2026-02-21 21:24:48,198 - INFO - Browser Setup Started: chrome\n2026-02-21 21:24:48,200 - INFO - ====== WebDriver manager ======\n2026-02-21 21:24:49,188 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:49,569 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:24:49,738 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:24:54,268 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\n2026-02-21 21:24:54,269 - INFO - Navigating to Shop page\n2026-02-21 21:24:55,577 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:24:55,583 - INFO - Applying price filter -&amp;gt; Min: 200.0, Max: 400.0\n2026-02-21 21:24:57,955 - INFO - Price filter applied successfully\n2026-02-21 21:24:57,968 - INFO - Number of products displayed after filtering: 4\n2026-02-21 21:24:57,974 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=200.0&amp;amp;max_price=400.0\n2026-02-21 21:24:57,980 - INFO - ========== FILTER PRODUCT TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_filterproduct_byprice.py:38 ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\nINFO     root:test_filterproduct_byprice.py:42 Navigating to Shop page\nINFO     root:test_filterproduct_byprice.py:45 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_filterproduct_byprice.py:53 Applying price filter -&amp;gt; Min: 200.0, Max: 400.0\nINFO     root:test_filterproduct_byprice.py:55 Price filter applied successfully\nINFO     root:test_filterproduct_byprice.py:60 Number of products displayed after filtering: 4\nINFO     root:test_filterproduct_byprice.py:69 URL after filtering: https://practice.automationtesting.in/shop/?min_price=200.0&amp;amp;max_price=400.0\nINFO     root:test_filterproduct_byprice.py:73 ========== FILTER PRODUCT TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:24:57,982 - INFO - Browser Teardown Started\n2026-02-21 21:25:00,248 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_filterproduct_byprice.py::test_filter_product[data2]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_filterproduct_byprice.py::test_filter_product[data2]&#34;, &#34;duration&#34;: &#34;00:00:12&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_filterproduct_byprice.py::test_filter_product[data2]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:12&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:25:00,250 - INFO - ------ Test Finished: test_filter_product[data1] ------\n\n2026-02-21 21:25:00,251 - INFO - ------ Test Started: test_filter_product[data2] ------\n2026-02-21 21:25:00,254 - INFO - Browser Setup Started: chrome\n2026-02-21 21:25:00,255 - INFO - ====== WebDriver manager ======\n2026-02-21 21:25:01,238 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:01,409 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:01,569 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:25:06,990 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\n2026-02-21 21:25:06,991 - INFO - Navigating to Shop page\n2026-02-21 21:25:08,366 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/\n2026-02-21 21:25:08,374 - INFO - Applying price filter -&amp;gt; Min: 250.0, Max: 500.0\n2026-02-21 21:25:09,657 - INFO - Price filter applied successfully\n2026-02-21 21:25:09,686 - INFO - Number of products displayed after filtering: 6\n2026-02-21 21:25:09,691 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=250.0&amp;amp;max_price=500.0\n2026-02-21 21:25:09,696 - INFO - ========== FILTER PRODUCT TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_filterproduct_byprice.py:38 ========== STARTING FILTER PRODUCT BY PRICE TEST ==========\nINFO     root:test_filterproduct_byprice.py:42 Navigating to Shop page\nINFO     root:test_filterproduct_byprice.py:45 Current URL after navigation: https://practice.automationtesting.in/shop/\nINFO     root:test_filterproduct_byprice.py:53 Applying price filter -&amp;gt; Min: 250.0, Max: 500.0\nINFO     root:test_filterproduct_byprice.py:55 Price filter applied successfully\nINFO     root:test_filterproduct_byprice.py:60 Number of products displayed after filtering: 6\nINFO     root:test_filterproduct_byprice.py:69 URL after filtering: https://practice.automationtesting.in/shop/?min_price=250.0&amp;amp;max_price=500.0\nINFO     root:test_filterproduct_byprice.py:73 ========== FILTER PRODUCT TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:25:09,698 - INFO - Browser Teardown Started\n2026-02-21 21:25:11,978 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_login_page.py::test_logout[data0]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login_page.py::test_logout[data0]&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login_page.py::test_logout[data0]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:25:11,979 - INFO - ------ Test Finished: test_filter_product[data2] ------\n\n2026-02-21 21:25:11,979 - INFO - ------ Test Started: test_logout[data0] ------\n2026-02-21 21:25:11,981 - INFO - Browser Setup Started: chrome\n2026-02-21 21:25:11,982 - INFO - ====== WebDriver manager ======\n2026-02-21 21:25:12,993 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:13,150 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:13,312 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n----------------------------- Captured stderr call -----------------------------\n2026-02-21 21:25:18,993 - INFO - ========== STARTING LOGOUT TEST ==========\n2026-02-21 21:25:18,993 - INFO - Opening My Account page\n2026-02-21 21:25:20,113 - INFO - Performing login before logout\n2026-02-21 21:25:22,828 - INFO - Clicking sign out\n2026-02-21 21:25:24,777 - INFO - ========== LOGOUT TEST PASSED ==========\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_login_page.py:70 ========== STARTING LOGOUT TEST ==========\nINFO     root:test_login_page.py:73 Opening My Account page\nINFO     root:test_login_page.py:77 Performing login before logout\nINFO     root:test_login_page.py:94 Clicking sign out\nINFO     root:test_login_page.py:98 ========== LOGOUT TEST PASSED ==========\n\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:25:24,778 - INFO - Browser Teardown Started\n2026-02-21 21:25:27,021 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}], &#34;tests/test_home_page.py::test_open_homepage&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_home_page.py::test_open_homepage&#34;, &#34;duration&#34;: &#34;00:00:10&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_home_page.py::test_open_homepage&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:10&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;---------------------------- Captured stderr setup -----------------------------\n2026-02-21 21:25:27,022 - INFO - ------ Test Finished: test_logout[data0] ------\n\n2026-02-21 21:25:27,022 - INFO - ------ Test Started: test_open_homepage ------\n2026-02-21 21:25:27,024 - INFO - Browser Setup Started: chrome\n2026-02-21 21:25:27,024 - INFO - ====== WebDriver manager ======\n2026-02-21 21:25:28,004 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:28,162 - INFO - Get LATEST chromedriver version for google-chrome\n2026-02-21 21:25:28,327 - INFO - Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:conftest.py:32 Browser Setup Started: chrome\nINFO     WDM:logger.py:11 ====== WebDriver manager ======\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome\nINFO     WDM:logger.py:11 Driver [C:\\Users\\Neeraja\\.wdm\\drivers\\chromedriver\\win64\\145.0.7632.77\\chromedriver-win32/chromedriver.exe] found in cache\n--------------------------- Captured stderr teardown ---------------------------\n2026-02-21 21:25:34,830 - INFO - Browser Teardown Started\n2026-02-21 21:25:37,066 - INFO - Browser Closed Successfully\n\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:conftest.py:41 Browser Teardown Started\nINFO     root:conftest.py:43 Browser Closed Successfully&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;reports_2026-02-21.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+  </body>
+</html>

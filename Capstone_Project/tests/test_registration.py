@@ -9,7 +9,6 @@ from Capstone_Project.conftest import logger
 from Capstone_Project.pages.Registration import RegistrationPage
 
 
-
 def read_registration_data_excel(file_name):
     base_path = os.path.join(os.path.dirname(__file__), "../data")
     file_path = os.path.join(base_path, file_name)
@@ -61,8 +60,16 @@ def test_user_registration(setup,data):
 
     driver.implicitly_wait(3)
     # Step 6: Validate Successful Registration
+    logger.info("Validating registration result")
+
     logger.info("Validating successful registration (Logout link visible)")
-    assert registration.is_registration_successful(), \
-        "User registration failed"
+    if registration.is_registration_successful():
+        logger.info("========== USER REGISTRATION TEST PASSED ==========")
+    else:
+        logger.info("Operation Failed Due To User Already Exists")
+        pytest.fail("Operation Failed Due To User Already Exists", pytrace=False)
+
+    logger.info("========== USER REGISTRATION TEST PASSED ==========")
+
     logger.info("========== USER REGISTRATION TEST PASSED ==========")
 

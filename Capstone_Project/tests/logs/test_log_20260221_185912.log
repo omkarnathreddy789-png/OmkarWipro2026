@@ -1,0 +1,31 @@
+2026-02-21 18:59:12,712 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-21 18:59:13,106 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-21 18:59:13,114 - INFO - Total test data rows loaded: 2
+2026-02-21 18:59:13,116 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-21 18:59:13,119 - INFO - Browser Setup Started: chrome
+2026-02-21 18:59:13,119 - INFO - ====== WebDriver manager ======
+2026-02-21 18:59:14,095 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:59:14,259 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-21 18:59:14,429 - INFO - Driver [C:\Users\Neeraja\.wdm\drivers\chromedriver\win64\145.0.7632.77\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-21 18:59:26,068 - INFO - ========== STARTING FILTER ORDERS BY USER TEST ==========
+2026-02-21 18:59:26,069 - INFO - Clicking on Login/My Account link
+2026-02-21 18:59:29,970 - INFO - Current URL after clicking login: https://practice.automationtesting.in/my-account/
+2026-02-21 18:59:29,976 - INFO - Entering Email: Rani12@gmail.com
+2026-02-21 18:59:30,137 - INFO - Email entered in field: Rani12@gmail.com
+2026-02-21 18:59:30,138 - INFO - Entering Password
+2026-02-21 18:59:30,302 - INFO - Password entered successfully
+2026-02-21 18:59:30,302 - INFO - Selecting Remember Me checkbox
+2026-02-21 18:59:30,428 - INFO - Checkbox selected status: True
+2026-02-21 18:59:30,428 - INFO - Clicking Login button
+2026-02-21 18:59:31,205 - INFO - URL after login: https://practice.automationtesting.in/my-account/
+2026-02-21 18:59:31,230 - INFO - Checking if Orders table is displayed
+2026-02-21 18:59:31,230 - INFO - Checking if Orders table is displayed
+2026-02-21 18:59:33,602 - INFO - Orders table is visible
+2026-02-21 18:59:33,602 - INFO - ========== FILTER ORDERS BY USER TEST PASSED ==========
+2026-02-21 18:59:33,604 - INFO - Browser Teardown Started
+2026-02-21 18:59:35,854 - INFO - Browser Closed Successfully
+
+2026-02-21 18:59:35,856 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-21 18:59:35,862 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-21 18:59:35,862 - INFO - Total Tests Collected: 1

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.10.5 on win32)" generated="2026-02-20T13:44:13.860237" rpa="false" schemaversion="5">
+<suite id="s1" name="Search Validation" source="C:\Users\91799\PycharmProjects\WIPRO 2026\CapstoneProject\robot-framework\tests\search_validation.robot">
+<kw name="Open Application" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:14.098448" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T13:44:14.098448" elapsed="5.040349"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-20T13:44:19.138797" elapsed="0.071008"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-20T13:44:19.209805" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:14.097467" elapsed="5.114339"/>
+</kw>
+<test id="s1-t1" name="Search With Valid Product" line="34">
+<kw name="Go To Shop Page" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:19.214336" level="INFO">Opening url 'https://practice.automationtesting.in/shop/'</msg>
+<arg>https://practice.automationtesting.in/shop/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T13:44:19.214336" elapsed="2.979236"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=content</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.195083" elapsed="0.023074"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:19.213326" elapsed="3.004831"/>
+</kw>
+<kw name="Search And Validate Products">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:22.219168" level="INFO">Typing text 'HTML' into text field 'id=s'.</msg>
+<arg>id=s</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.219168" elapsed="0.224048"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:22.444206" level="INFO">Sending key(s) ('ENTER',) to id=s element.</msg>
+<msg time="2026-02-20T13:44:22.764409" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-02-20T13:44:22.764409" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=s</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.443216" elapsed="0.334620"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=ul.products</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.777836" elapsed="0.045567"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:22.846346" level="INFO">${count} = 8</msg>
+<var>${count}</var>
+<arg>css=ul.products li</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.823403" elapsed="0.022943"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-20T13:44:22.847346" level="INFO">Product Count: 8</msg>
+<arg>Product Count: ${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.846346" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>No products displayed after search</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.847346" elapsed="0.000998"/>
+</kw>
+<arg>${VALID_PRODUCT}</arg>
+<status status="PASS" start="2026-02-20T13:44:22.218157" elapsed="0.630187"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:19.211806" elapsed="3.636538"/>
+</test>
+<test id="s1-t2" name="Search With Invalid Product" line="38">
+<kw name="Go To Shop Page" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:22.852342" level="INFO">Opening url 'https://practice.automationtesting.in/shop/'</msg>
+<arg>https://practice.automationtesting.in/shop/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T13:44:22.851345" elapsed="2.828999"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=content</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T13:44:25.681324" elapsed="0.013013"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:22.850342" elapsed="2.843995"/>
+</kw>
+<kw name="Search And Validate Products">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:25.695350" level="INFO">Typing text 'XYZINVALID123' into text field 'id=s'.</msg>
+<arg>id=s</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T13:44:25.695350" elapsed="0.141164"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:25.837516" level="INFO">Sending key(s) ('ENTER',) to id=s element.</msg>
+<msg time="2026-02-20T13:44:26.197301" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-02-20T13:44:26.198343" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=s</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-02-20T13:44:25.836514" elapsed="1.834301"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:43.034134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-20T13:44:43.035263" level="FAIL">Element 'css=ul.products' not visible after 15 seconds.</msg>
+<arg>css=ul.products</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-20T13:44:27.670815" elapsed="15.366469">Element 'css=ul.products' not visible after 15 seconds.</status>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${count}</var>
+<arg>css=ul.products li</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-20T13:44:43.038275" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Product Count: ${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-20T13:44:43.038275" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>No products displayed after search</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-02-20T13:44:43.038275" elapsed="0.000000"/>
+</kw>
+<arg>${INVALID_PRODUCT}</arg>
+<status status="FAIL" start="2026-02-20T13:44:25.695350" elapsed="17.343937">Element 'css=ul.products' not visible after 15 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-02-20T13:44:22.849354" elapsed="20.189933">Element 'css=ul.products' not visible after 15 seconds.</status>
+</test>
+<test id="s1-t3" name="Search With Empty Value" line="42">
+<kw name="Go To Shop Page" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:43.041287" level="INFO">Opening url 'https://practice.automationtesting.in/shop/'</msg>
+<arg>https://practice.automationtesting.in/shop/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-20T13:44:43.041287" elapsed="2.703799"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=content</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-20T13:44:45.745086" elapsed="0.015011"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:43.040287" elapsed="2.719810"/>
+</kw>
+<kw name="Search And Validate Products">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:45.762086" level="INFO">Typing text '' into text field 'id=s'.</msg>
+<arg>id=s</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T13:44:45.761087" elapsed="0.100182"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:45.862255" level="INFO">Sending key(s) ('ENTER',) to id=s element.</msg>
+<msg time="2026-02-20T13:44:46.226042" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-02-20T13:44:46.226042" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=s</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-02-20T13:44:45.862255" elapsed="0.373809"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=ul.products</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-20T13:44:46.236064" elapsed="0.025583"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-02-20T13:44:46.276315" level="INFO">${count} = 8</msg>
+<var>${count}</var>
+<arg>css=ul.products li</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-02-20T13:44:46.261647" elapsed="0.014668"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-20T13:44:46.277382" level="INFO">Product Count: 8</msg>
+<arg>Product Count: ${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-20T13:44:46.276315" elapsed="0.001067"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>No products displayed after search</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-02-20T13:44:46.277382" elapsed="0.000979"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2026-02-20T13:44:45.761087" elapsed="0.517274"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:43.039287" elapsed="3.239074"/>
+</test>
+<kw name="Close Application" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-20T13:44:46.279362" elapsed="2.347071"/>
+</kw>
+<status status="PASS" start="2026-02-20T13:44:46.279362" elapsed="2.347071"/>
+</kw>
+<status status="FAIL" start="2026-02-20T13:44:13.861236" elapsed="34.765197"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Search Validation" id="s1" pass="2" fail="1" skip="0">Search Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
